@@ -1,0 +1,51 @@
+@mixin font($fs, $fw, $lh, $ls) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+}
+
+@mixin mobile {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile-close {
+  @media screen and (max-width: 319px) {
+    @content;
+  }
+}
+
+@mixin tablet-close {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop-close {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin retina {
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    @content;
+  }
+}
