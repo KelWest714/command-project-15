@@ -4,13 +4,17 @@
   background-color: $color-footer-bg;
 }
 
-.footer__thumb {
+.footer .container {
+  margin-bottom: 40px;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+  }
 
-    margin-bottom: 48px;
+  @include desktop {
+    margin-bottom: 60px;
+    align-items: flex-end;
   }
 }
 
@@ -61,6 +65,12 @@
   }
 }
 
+.contact__thumb {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 52px;
+  }
+}
+
 .social {
   display: flex;
   justify-content: flex-end;
@@ -93,8 +103,6 @@
 
   color: $color-main-text;
 
-  margin-bottom: 40px;
-
   @include tablet {
     margin-bottom: 0;
     font-size: 14px;
@@ -116,9 +124,22 @@
   }
 }
 
+.copy__thumb {
+  border-top: 1px solid #e1e1e1;
+
+  padding-top: 16px;
+
+  @include tablet {
+    padding-top: 8px;
+  }
+
+  @include desktop {
+    padding-top: 7px;
+  }
+}
+
 .footer__copy {
   width: 140px;
-  position: relative;
 
   font-weight: 700;
   font-size: 14px;
