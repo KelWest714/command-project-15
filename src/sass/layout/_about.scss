@@ -1,33 +1,31 @@
 .about {
-    background-color: $color-footer-bg;
-    text-align: center;
+  background-color: $color-footer-bg;
+  text-align: center;
+  background-image: url(/src/images/mobile-about-milk.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 80%;
+
+  @include mobile {
     background-image: url(/src/images/mobile-about-milk.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-y: 80%;
-
-    @include mobile {
-        background-image: url(/src/images/mobile-about-milk.png);
-        @media screen and (min-device-pixels-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-            background-image: url(/src/images/mobile-about-milk@2x.png);
-        }
+    @media screen and (min-device-pixels-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/mobile-about-milk@2x.png);
     }
+  }
 
-    @include desktop {
-        background-image: url(/src/images/desktop-about-milk.png);
-        @media screen and (min-device-pixel-ratio: 2),
-            screen and (min-resolution: 192dpi),
-            screen and (min-resolution: 2dppx) {
-                background-image: url(/src/images/desktop-about-milk@2x.png);
-            }
+  @include desktop {
+    background-image: url(/src/images/desktop-about-milk.png);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/src/images/desktop-about-milk@2x.png);
     }
+  }
 }
 
 .about-containeir {
-    margin: 0 auto;
-    padding-top: ;
-    padding-bottom: ;
-    width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
