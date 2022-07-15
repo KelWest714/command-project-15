@@ -1,13 +1,32 @@
 <section class="hero">
   <div class="container">
+    <picture>
+      <source
+        srcset="
+          ./images/mobile-hero-icecreem.png    1x,
+          ./images/mobile-hero-icecreem@2x.png 2x
+        "
+      />
+      <img
+        class="hero__icecreem image"
+        src="./images/mobile-hero-icecreem.png"
+        alt="icecreem"
+      />
+    </picture>
+    <div class="hero__circle"></div>
     <div class="hero__wrap">
-      <h1 class="hero__title">ice cream made with passion</h1>
+      <h1 class="hero__title">
+        ice cream made with
+        <span class="hero__title--accent">passion</span>
+      </h1>
       <ul class="hero__list list">
         <li class="hero__item">
           <a class="hero__link link" href="#">Products</a>
         </li>
         <li class="hero__item">
-          <a class="hero__link link" href="#">How it’s made?</a>
+          <a class="hero__link hero__link--white link" href="#"
+            >How it’s made?</a
+          >
         </li>
       </ul>
     </div>
