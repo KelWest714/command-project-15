@@ -11,6 +11,8 @@
 
   @include tablet {
     max-width: 768px;
+    padding-top: 92px;
+    padding-bottom: 56px;
   }
 
   .container {
@@ -25,6 +27,13 @@
   bottom: -158px;
   width: 171px;
   height: 410px;
+
+  @include tablet {
+    width: 143px;
+    height: 336px;
+    right: 303px;
+    bottom: -56px;
+  }
 }
 
 .hero__circle {
@@ -38,22 +47,79 @@
   background-color: $color-second-bg;
   border-radius: 50%;
 
+  @include tablet {
+    left: 248px;
+    bottom: -16px;
+    width: 335px;
+    height: 333px;
+  }
+}
+
+.hero__girl {
+  display: none;
+
+  @include tablet {
+    position: absolute;
+    right: 32px;
+    bottom: -56px;
+    z-index: 1;
+    display: block;
+    width: 190px;
+    height: 150px;
+  }
+}
+
+.hero__milk {
+  display: none;
+
+  @include tablet {
+    position: absolute;
+    left: 32px;
+    bottom: -40px;
+    display: block;
+    width: 152px;
+    height: 154px;
+  }
+}
+
+.hero__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.hero__position {
+  @include tablet {
+    margin-bottom: 61px;
+  }
 }
 
 .hero__title {
   position: relative;
   z-index: 2;
+
   max-width: 218px;
+  margin-bottom: 20px;
+
   font-family: 'Titan One';
   @include font(400, 26, 30, .04em);
   text-transform: uppercase;
   color: $color-white;
-  margin-bottom: 20px;
+
+  @include tablet {
+    max-width: 162px;
+    @include font(400, 22, 25, .04em);
+  }
 
   &--accent {
     font-size: 48px;
     line-height: 96.5%;
     color: #D41443;
+
+    @include tablet {
+      font-size: 34px;
+      line-height: 90.5%;
+    }
   }
 }
 
@@ -62,7 +128,9 @@
 }
 
 .hero__item {
-  margin-right: 9.2px;
+  &:not(:last-child) {
+    margin-right: 9.2px;
+  }
 }
 
 .hero__link {
@@ -82,6 +150,8 @@
   background-color: $color-accent;
   border-radius: 20px;
 
+
+
   &--white {
     width: 82.8px;
 
@@ -93,18 +163,83 @@
 
 .quantity {
   display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.quantity__item {}
+.quantity__item {
+  position: relative;
 
-.quantity__number {}
+  display: block;
+  width: 43px;
+  height: 44px;
 
-.quantity__descriotion {}
-
-.hero__description {
-  display: none;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
-.hero__button {
+.quantity__circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $color-white;
+}
+
+.quantity__number {
+  position: relative;
+  z-index: 1;
+  font-family: 'Titan One';
+  @include font(400, 28, 32, .04em);
+  text-transform: uppercase;
+  color: $color-accent;
+}
+
+.quantity__description {
+  @include font(400, 8, 10, null);
+
+  color: $color-white;
+}
+
+.description {
+  position: relative;
+  z-index: 1;
   display: none;
+
+  @include tablet {
+    display: block;
+    margin-left: 152px;
+  }
+}
+
+.description__title {
+  max-width: 114px;
+  margin-bottom: 7px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 150%;
+  color: $color-white;
+}
+
+.description__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+
+  background-color: $color-white;
+  border-radius: 50%;
+  fill: $color-accent;
+
+  border: none;
 }

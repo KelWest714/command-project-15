@@ -3,48 +3,95 @@
     <picture>
       <source
         srcset="
+          ./images/tablet-hero-icecreem.png    1x,
+          ./images/tablet-hero-icecreem@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
           ./images/mobile-hero-icecreem.png    1x,
           ./images/mobile-hero-icecreem@2x.png 2x
         "
       />
+
       <img
         class="hero__icecreem image"
         src="./images/mobile-hero-icecreem.png"
         alt="icecreem"
       />
     </picture>
+
+    <picture>
+      <source
+        srcset="
+          ./images/tablet-hero-girl.png    1x,
+          ./images/tablet-hero-girl@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <img
+        class="hero__girl image"
+        src="./images/tablet-hero-girl.png"
+        alt="icecreem"
+      />
+    </picture>
+
+    <picture>
+      <source
+        srcset="
+          ./images/tablet-hero-milk.png    1x,
+          ./images/tablet-hero-milk@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <img
+        class="hero__milk image"
+        src="./images/tablet-hero-milk.png"
+        alt="icecreem"
+      />
+    </picture>
     <div class="hero__circle"></div>
     <div class="hero__wrap">
-      <h1 class="hero__title">
-        ice cream made with
-        <span class="hero__title--accent">passion</span>
-      </h1>
-      <ul class="hero__list list">
-        <li class="hero__item">
-          <a class="hero__link link" href="#">Products</a>
+      <div class="hero__position">
+        <h1 class="hero__title">
+          ice cream made with
+          <span class="hero__title--accent">passion</span>
+        </h1>
+        <ul class="hero__list list">
+          <li class="hero__item">
+            <a class="hero__link link" href="#">Products</a>
+          </li>
+          <li class="hero__item">
+            <a class="hero__link hero__link--white link" href="#"
+              >How it’s made?</a
+            >
+          </li>
+        </ul>
+      </div>
+      <ul class="quantity list">
+        <li class="quantity__item">
+          <span class="quantity__circle"></span>
+          <p class="quantity__number">16</p>
+          <p class="quantity__description">cafes</p>
         </li>
-        <li class="hero__item">
-          <a class="hero__link hero__link--white link" href="#"
-            >How it’s made?</a
-          >
+        <li class="quantity__item">
+          <span class="quantity__circle"></span>
+          <p class="quantity__number">23</p>
+          <p class="quantity__description">food trucks</p>
         </li>
       </ul>
     </div>
-    <ul class="quantity list">
-      <li class="quantity__item">
-        <p class="quantity__number">16</p>
-        <p class="quantity__descriotion">cafes</p>
-      </li>
-      <li>
-        <p class="quantity__number">23</p>
-        <p class="quantity__description">food trucks</p>
-      </li>
-    </ul>
-
-    <p class="hero__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et
-    </p>
-    <button class="hero__button" type="button"></button>
+    <div class="description">
+      <p class="description__title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et
+      </p>
+      <button class="description__button" type="button">
+        <svg class="description__icon" width="10" height="10">
+          <use href="./images/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
