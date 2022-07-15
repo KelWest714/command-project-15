@@ -1,13 +1,70 @@
-<h2>
+<div class="container">
+<section class=" rc__section section">
+<h2 class="rc__title">
     customer rewievs
 </h2>
-<!-- <img src="../../src/images/customers/CR.png" alt=""> -->
-<section>
-    <p>
-        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
-        congue. Lorem ipsum primis in nibh vel risus.
-    </p>
-    <h3>
-        Emily, Los Angeles
-    </h3>
+    <div class="wrapper">
+        <div class="rc__sliders">
+            <div class="slide active">
+            <img class="icon" src="../src/images/customers/CR.png" alt="">
+            </div>
+            <div class="slide ">
+            <img class="icon" src="../src/images/customers/CR2.png" alt="">
+            </div>
+            <div class="slide ">
+            <img class="icon" src="../src/images/customers/CR3.png" alt="">
+            </div>
+
+            <div id="btn-prev"></div>
+            <div id="btn-next"></div>
+            </div>
+        <div class="rc__text-thumb">
+            <div class="rc__bottom-border">
+                <p class="rc__text">
+                    Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam
+                    nunc, accumsan
+                    congue. Lorem ipsum primis in nibh vel risus.
+                </p>
+            </div>
+        </div>
+            <div class="rc__dots_block">
+                <span class="dots " onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+            </div>
+       
+        <h3 class="rc-subtitle">
+            Emily, Los Angeles
+        </h3>
+            <div class="rc__dots_block">
+                <span class="dot active_dot">
+                   <svg class="dot__current">
+                    <use href="./images/sprite.svg#rc__dot-icon"></use>
+                   </svg>
+                </span>
+                <span class="dot" >
+                    <svg class="dot__current">
+                    <use href="./images/sprite.svg#rc__dot-icon"></use>
+                   </svg>
+                </span>
+                <span class="dot" >
+                    <svg class="dot__current">
+                    <use href="./images/sprite.svg#rc__dot-icon"></use>
+                   </svg>
+                </span>
+            </div>
+
+        <!-- <div class="button-block">
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="prev" onclick="plusSlides(+1)">&#10095</a>
+        </div> -->
+        
+
+    <!-- <div class="block">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span> -->
+    </div>
 </section>
+    
+<script src="index.js"></script>
