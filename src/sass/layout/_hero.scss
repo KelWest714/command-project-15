@@ -1,6 +1,110 @@
 .hero {
+  margin: 0 auto;
   padding-top: 194px;
-  padding-right: 82px;
   padding-bottom: 158px;
   background-color: $color-main-bg;
+  overflow: hidden;
+
+  @include mobile {
+    max-width: 320px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.hero__icecreem {
+  position: absolute;
+  z-index: 1;
+  right: 32px;
+  bottom: -158px;
+  width: 171px;
+  height: 410px;
+}
+
+.hero__circle {
+  position: absolute;
+  left: 36px;
+  bottom: -83px;
+  z-index: 0;
+
+  width: 346px;
+  height: 344px;
+  background-color: $color-second-bg;
+  border-radius: 50%;
+
+}
+
+.hero__title {
+  position: relative;
+  z-index: 2;
+  max-width: 218px;
+  font-family: 'Titan One';
+  @include font(400, 26, 30, .04em);
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 20px;
+
+  &--accent {
+    font-size: 48px;
+    line-height: 96.5%;
+    color: #D41443;
+  }
+}
+
+.hero__list {
+  display: flex;
+}
+
+.hero__item {
+  margin-right: 9.2px;
+}
+
+.hero__link {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 61.2px;
+  height: 24px;
+
+  @include font(400, 8, 10, null);
+  color: $color-white;
+
+  background-color: $color-accent;
+  border-radius: 20px;
+
+  &--white {
+    width: 82.8px;
+
+    color: $color-accent;
+
+    background-color: $color-white;
+  }
+}
+
+.quantity {
+  display: none;
+}
+
+.quantity__item {}
+
+.quantity__number {}
+
+.quantity__descriotion {}
+
+.hero__description {
+  display: none;
+}
+
+.hero__button {
+  display: none;
 }
