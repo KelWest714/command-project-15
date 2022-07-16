@@ -1,13 +1,66 @@
-<h2>
-    customer rewievs
-</h2>
-<!-- <img src="../../src/images/customers/CR.png" alt=""> -->
-<section>
-    <p>
-        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
-        congue. Lorem ipsum primis in nibh vel risus.
-    </p>
-    <h3>
-        Emily, Los Angeles
-    </h3>
-</section>
+<div class="container">
+    <section class=" rc__section section">
+        <h2 class="rc__title">
+            customer rewievs
+        </h2>
+        <div class="wrapper">
+            <div class="rc__sliders">
+                <div class="slide active">
+                    <img class="icon" src="../src/images/customers/CR.png" alt="">
+                </div>
+                <div class="slide ">
+                    <img class="icon" src="../src/images/customers/CR2.png" alt="">
+                </div>
+                <div class="slide ">
+                    <img class="icon" src="../src/images/customers/CR3.png" alt="">
+                </div>
+
+                <div id="btn-prev"></div>
+                <div id="btn-next"></div>
+            </div>
+            <div class="rc__text-thumb">
+                <div class="rc__bottom-border">
+                    <p class="rc__text">
+                        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla
+                        quam
+                        nunc, accumsan
+                        congue. Lorem ipsum primis in nibh vel risus.
+                    </p>
+                </div>
+            </div>
+            <div class="rc__dots_block">
+                <span class="dots "></span>
+                <span class="dots"></span>
+                <span class="dots"></span>
+            </div>
+
+            <h3 class="rc-subtitle">
+                Emily, Los Angeles
+            </h3>
+            <div class="rc__dots_block">
+                <span class="dot active_dot">
+                    <svg class="dot__current">
+                        <use href="./images/sprite.svg#rc__dot-icon"></use>
+                    </svg>
+                </span>
+                <span class="dot">
+                    <svg class="dot__current">
+                        <use href="./images/sprite.svg#rc__dot-icon"></use>
+                    </svg>
+                </span>
+                <span class="dot">
+                    <svg class="dot__current">
+                        <use href="./images/sprite.svg#rc__dot-icon"></use>
+                    </svg>
+                </span>
+            </div>
+
+
+            <!-- <div class="block">
+        <span class="dot active"></span>
+        <span class="dot" ></span>
+        <span class="dot"></span> -->
+        </div>
+    </section>
+
+    <script src="index.js"></script>
