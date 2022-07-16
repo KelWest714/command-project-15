@@ -1,9 +1,9 @@
-<h2 class="title visually-hidden">Contacts</h2>
+<section class="contacts">
 
-<div class="carousel hidden-sm-and-up" data-flickity='{ "wrapAround": true }'>
-<div class="container contacts__container hidden-xs-only">
+<div class="container contacts__container">
+ <h2 class="title visually-hidden">Contacts</h2>    
     <ul class="contacts__list-items">
-        <li id="chicago" class="contacts__content text animate__animated">
+        <li class="contacts__content text">
             <div class="contacts__subtitle-holder contacts__subtitle-holder--primary">
                 <p class="contacts__subtitle">CAFE</p>
             </div>
@@ -22,7 +22,7 @@
                 <a class="contacts__link" href="mailto:noreply@envato.com">noreply@envato.com</a>
             </address>
         </li>
-        <li id="los-angeles" class="contacts__content text animate__animated">
+        <li class="contacts__content text">
             <div class="contacts__subtitle-holder contacts__subtitle-holder--secondary">
                 <p class="contacts__subtitle">FOODTRUCK</p>
             </div>
@@ -41,7 +41,7 @@
                 <a class="contacts__link" href="mailto:noreply@envato.com">noreply@envato.com</a>
             </address>
         </li>
-        <li id="new-york" class="contacts__content text animate__animated">
+        <li class="contacts__content text">
             <div class="contacts__subtitle-holder contacts__subtitle-holder--primary">
                 <p class="contacts__subtitle">CAFE</p>
             </div>
@@ -62,16 +62,20 @@
         </li>
     </ul>
 </div>
-
 <div class="contacts__btn-wrapper">
-    <button data-target="modal-location" data-toggle="modal"
-        class="btn btn--secondary contacts__btn contacts__btn--secondary" type="button">
+    <button class="btn btn--secondary contacts__btn contacts__btn--secondary" type="button">
         Our Locations
+        <svg class="contacts__btn-icon" width="10" height="20">
+            <use href="./images/icons.svg#icon-arrow"></use>
+        </svg>
     </button>
-    </div>
+    
     <button class="btn btn--primary contacts__btn contacts__btn--primary" type="button" data-target="modal-franchise"
         data-toggle="modal">
         Franchise
-        
+        <svg class="contacts__btn-icon" width="10" height="20">
+            <use href="./images/icons.svg#icon-arrow"></use>
+        </svg>
     </button>
+    </div>
 </section>

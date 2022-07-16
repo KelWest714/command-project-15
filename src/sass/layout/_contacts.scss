@@ -1,24 +1,42 @@
 .contacts {
-  background-color: linear-gradient(
-    var(--color-white) 84px,
-    var(--color-footer-bg) 84px
-  );
-
-  @include tablet {
-    background-image: linear-gradient(
-      var(--color-white) 78px,
-      var(--color-footer-bg) 78px
-    );
-    padding-bottom: 158px;
+  background-color: var(--color-footer-bg);
+  @include desktop {
+    background-repeat: no-repeat;
+    background-position: 0px 102px, 0px 0px;
+    background-size: contain;
   }
 }
 
 .contacts__container {
-  background-color: var(--color-footer-bg);
+  @include mobile {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
+
 .contacts__list-items {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px -15px 0;
+  margin-bottom: 60px;
   list-style: none;
+
+  @include mobile {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px 81px;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__content {
@@ -32,6 +50,26 @@
 
   &:not(:last-child) {
     margin-right: 32px;
+  }
+
+  @include desktop {
+    margin: 15px;
+    padding: 51px 43px;
+    flex-basis: calc(33.33333% - 20px);
+  }
+
+  @include tablet {
+    margin: 10px;
+    min-width: 0;
+    padding: 50px 31px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -70,6 +108,12 @@
   letter-spacing: normal;
 }
 
+.contacts__text-desc {
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.83;
+}
+
 .contacts__text--accent {
   color: var(--color-second-bg);
   line-height: 1.83;
@@ -78,9 +122,10 @@
 
 .contacts__text-desc {
   margin-bottom: 25px;
-
   font-size: 12px;
   line-height: 1.5;
+
+  color: var(--color-second-text);
 }
 
 .contacts__item {
@@ -120,6 +165,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+ 
 }
 
 .contacts__btn {
@@ -134,6 +181,11 @@
 
   &:not(:last-child) {
     margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
   }
 }
 
@@ -153,6 +205,26 @@
   transition: get-transition-prop(background-color), get-transition-prop(fill);
 }
 
+.contacts__btn--secondary {
+  @include tablet {
+    width: 191px;
+  }
+
+  @include desktop {
+    width: 198px;
+  }
+}
+
+.contacts__btn--primary {
+  @include tablet {
+    width: 174px;
+  }
+
+  @include desktop {
+    width: 180px;
+  }
+}
+
 .btn--primary {
   background-color: var(--color-white);
   color: var(--color-accent);
@@ -166,9 +238,17 @@
 .btn--secondary {
   background-color: var(--color-accent);
   color: var(--color-white);
+  margin-right: 15px;
 
   &:hover,
   &:focus {
     background-color: #d41342;
   }
+}
+
+.contacts__btn-icon {
+  margin-left: 13px;
+  width: 10px;
+  height: 20px;
+  fill: currentColor;
 }
