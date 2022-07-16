@@ -1,38 +1,8 @@
-(() => {
-  const refs = {
-    openFormBtn: document.querySelector('[data-form-open]'),
-    closeFormBtn: document.querySelector('[data-form-close]'),
-    form: document.querySelector('[data-form]'),
-    body: document.querySelector('body'),
-
-    openGeoBtn: document.querySelector('[data-geo-open]'),
-    closeGeoBtn: document.querySelector('[data-geo-close]'),
-    geo: document.querySelector('[data-geo]'),
-  };
-
-  refs.openFormBtn.addEventListener('click', toggleForm);
-  refs.closeFormBtn.addEventListener('click', toggleForm);
-
-  refs.openGeoBtn.addEventListener('click', toggleGeo);
-  refs.closeGeoBtn.addEventListener('click', toggleGeo);
-
-  function toggleGeo() {
-    refs.geo.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
-  }
-
-  function toggleForm() {
-    refs.form.classList.toggle('is-hidden');
-
-    refs.body.classList.toggle('no-scroll');
-  }
-})();
-
-
 const prev = document.getElementById('btn-prev'),
     next = document.getElementById('btn-next'),
     slides = document.querySelectorAll('.slide'),
-    dots = document.querySelectorAll('.dot');
+    dots = document.querySelectorAll('.dot'),
+feedbacks = document.querySelectorAll('.feedback');
 
 let index = 0;
 
@@ -52,9 +22,18 @@ const activeDot = n => {
      dots[n].classList.add('active_dot');
 }
 
+const activeFeedback = n => {
+    console.log(n);
+    for (feedback of feedbacks) {
+        feedback.classList.remove('active');
+    }
+     feedbacks[n].classList.add('active');
+}
+
 const prepareCurrentSlide = ind => {
     activeSlide(ind)
     activeDot(ind)
+    activeFeedback(ind)
 }
 
 const nextSlide = () => {
@@ -70,7 +49,7 @@ const nextSlide = () => {
 const prevSlide = () => {
     if (index == 0) {
         index = slides.length - 1
-        prepareCurrentSliden(index);
+        prepareCurrentSlide(index);
     } else {
         index--;
         prepareCurrentSlide(index);
