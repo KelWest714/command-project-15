@@ -1,25 +1,57 @@
 <header class="page-header">
-  <a class="logo" href="./index.html" aria-label="логотип">логотип</a>
-  <button class="mobile-menu-open" type="button">o</button>
-  <button class="mobile-menu-close" type="button" data-geo-open>x</button>
-  <button type="button" class="form" data-form-open>Buy now</button>
-  <nav class="page-header__nav">
-    <ul class="page-header__list">
-      <li class="page-header__items">
-        <a class="page-header__link" href="#home">Home</a>
-      </li>
-      <li class="page-header__items">
-        <a class="page-header__link" href="#aboutus">About us</a>
-      </li>
-      <li class="page-header__items">
-        <a class="page-header__link" href="#howit'smade">How it's made?</a>
-      </li>
-      <li class="page-header__items">
-        <a class="page-header__link" href="#ourproducts">Our products</a>
-      </li>
-      <li class="page-header__items">
-        <a class="page-header__link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="container container--flex">
+    <div class="page-header__container">
+      <a class="logo" href="./index.html">
+        <svg width="199" height="50">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button class="mobile-menu-open" type="button">
+        <svg class="mobile-menu-open__icon" width="32" height="32">
+          <use href="./images/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <button class="button-buy-tablet" type="button">
+        <span class="button-buy-tablet__text">Buy now</span>
+        <svg class="button-buy__icon" width="20" height="20">
+          <use href="./images/sprite.svg#icon-next"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu">
+      <div class="menu__container">    
+      <button class="mobile-menu-close" type="button">
+        <svg class="mobile-menu-close__icon" width="32" height="32">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <button class="button-buy" type="button">
+        <span class="button-buy__text">Buy now</span>
+        <svg class="button-buy__icon" width="20" height="20">
+          <use href="./images/sprite.svg#icon-next"></use>
+        </svg>
+      </button>
+      <nav class="page-header__nav">
+        <ul class="page-header__list list">
+          <li class="page-header__items">
+            <a class="page-header__link link" href="#home">Home</a>
+          </li>
+          <li class="page-header__items">
+            <a class="page-header__link link" href="#aboutus">About us</a>
+          </li>
+          <li class="page-header__items">
+            <a class="page-header__link link" href="#howit'smade">How it's made?</a>
+          </li>
+          <li class="page-header__items">
+            <a class="page-header__link link" href="#ourproducts">Our products</a>
+          </li>
+          <li class="page-header__items">
+            <a class="page-header__link link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
 </header>
