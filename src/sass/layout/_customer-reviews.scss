@@ -1,0 +1,161 @@
+.rc__section {
+    margin: 60px 0;
+}
+
+.rc__title {
+    display: none;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.icon {
+    width: 85px;
+    border-radius: 50%;
+    margin: 0px auto 32px auto;
+}
+
+.rc__text-thumb {
+    background: #FAFAFA;
+    padding: 30px 50px 17px 50px;
+}
+
+.rc__bottom-border {
+    background: repeating-linear-gradient(#fafafa, #fafafa 30px, #E1E1E1 20px, #E1E1E1 31px)
+}
+
+.rc__text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 255%;
+    text-align: center;
+
+    color: #000000;
+
+    // margin: 43px 58px 26px 65px;
+    margin: 0 8px 0 15px;
+    // background: repeating-linear-gradient(#fafafa, #fafafa 30px, #E1E1E1 20px, #E1E1E1 31px)
+}
+
+.rc__dots_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dots {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #C7133E;
+    margin: 16px 0;
+
+}
+
+.dots:not(last-child) {
+    margin-right: 10px;
+}
+
+.dots:last-child {
+    margin-right: 0;
+}
+
+.rc-subtitle {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.wrapper {
+    position: relative;
+    // }
+    // .rc__sliders{
+    //     position: absolute;
+}
+
+// .button-block{
+// width: 200px;
+// display: block;
+// height: 200px;
+// position: absolute;
+// background-color: #000000;
+// }
+// #btn-prev #btn-next{
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     height: 50px;
+//     width: 50px;
+//     background-color: #C7133E;
+//     opacity: 0.4;
+//     cursor: pointer;
+//     transition: opasity .2s ease-in-out;
+// }
+
+#btn-prev {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #C7133E;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opasity .2s ease-in-out;
+}
+
+#btn-next {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #C7133E;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opasity .2s ease-in-out;
+}
+
+
+
+
+// #btn-next{
+//     left: auto;
+//     right: 0;
+// }
+.button-block {
+    width: 100%;
+    height: 50px;
+}
+
+.dot {
+    background: #D9D9D9;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+}
+
+.dot:not(last-child) {
+    margin-right: 18px;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.dot .active {
+    background-color: white
+}
+
+.dot__current {
+    width: 100%;
+    height: 100%;
+}
