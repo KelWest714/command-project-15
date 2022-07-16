@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let openModals = document.getElementsByClassName('form');
 
+
   for (let button of openModals) {
     button.onclick = function (e) {
       e.preventDefault();
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ----------------------- Slider scripts-------------------------
+
 
 const prev = document.getElementById('btn-prev'),
   next = document.getElementById('btn-next'),
@@ -82,7 +84,40 @@ const activeSlide = n => {
   slides[n].classList.add('active');
 };
 
+const activeDot = n => {
+    console.log(n);
+    for (dot of dots) {
+        dot.classList.remove('active_dot');
+    }
+     dots[n].classList.add('active_dot');
+}
+
+const prepareCurrentSlide = ind => {
+    activeSlide(ind)
+    activeDot(ind)
+}
+
 const nextSlide = () => {
+
+    if (index == slides.length - 1) {
+        index = 0;
+        prepareCurrentSlide(index);
+    } else {
+        index++;
+        prepareCurrentSlide(index);
+        }  
+}
+
+const prevSlide = () => {
+    if (index == 0) {
+        index = slides.length - 1
+        prepareCurrentSliden(index);
+    } else {
+        index--;
+        prepareCurrentSlide(index);
+        }
+}
+
   if (index == slides.length - 1) {
     index = 0;
     activeSlide(index);
@@ -121,6 +156,13 @@ const prevSlide = () => {
 })();
 
 
-next.addEventListener('click', nextSlide);
-prev.addEventListener('click', prevSlide);
+dots.forEach((item, indexDot) => {
+    item.addEventListener('click', () => {
+        index = indexDot;
+        prepareCurrentSlide(index);
+    })
+})
 
+next.addEventListener('click', nextSlide);
+
+prev.addEventListener('click', prevSlide);
