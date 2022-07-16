@@ -125,7 +125,6 @@ const prevSlide = () => {
     index++;
     activeSlide(index);
   }
-};
 
 const prevSlide = () => {
   if (index == 0) {
@@ -136,7 +135,7 @@ const prevSlide = () => {
     activeSlide(index);
   }
 
-})();
+}();
 // mobile js
 (() => {
   const refs = {
