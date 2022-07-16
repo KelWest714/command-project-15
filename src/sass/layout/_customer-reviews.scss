@@ -23,14 +23,18 @@
 .rc__text-thumb {
     background: #FAFAFA;
     padding: 43px 50px 17px 50px;
-        @media screen and (min-width: 768px) {
-            padding: 37px 6px 36px 6px;
-            }
-        // @media screen and (min-width: 1200px) {
-        //     margin: 0 34px 0 36px;
-        //     font-size: 16px;
-        //     line-height: 186%;
-        // }
+
+
+    @media screen and (min-width: 768px) {
+        padding: 37px 6px 36px 6px;
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //     margin: 0 34px 0 36px;
+    //     font-size: 16px;
+    //     line-height: 186%;
+    // }
+
 }
 
 .rc__bottom-border {
@@ -46,20 +50,23 @@
     text-align: center;
     color: #000000;
     margin: 0 8px 0 15px;
-        @media screen and (min-width: 768px) {
-            margin: 0 45px 0 49px;
 
-            font-size: 14px;
-            line-height: 221%;
-            letter-spacing: 0.04em;
-        }
-    
-        @media screen and (min-width: 1200px) {
-            margin: 0 34px 0 36px;
-            font-size: 16px;
-            line-height: 193%;
 
-        }
+    @media screen and (min-width: 768px) {
+        margin: 0 45px 0 49px;
+
+        font-size: 14px;
+        line-height: 221%;
+        letter-spacing: 0.04em;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0 34px 0 36px;
+        font-size: 16px;
+        line-height: 193%;
+
+    }
+
 }
 
 .rc__dots_block {
@@ -85,7 +92,10 @@
     margin-right: 0;
 }
 
-.rc__dot_block{
+
+
+.rc__dot_block {
+
     display: flex;
     justify-content: center;
 }
@@ -153,7 +163,9 @@
     margin-right: 0;
 }
 
-.active_dot{
+
+.active_dot {
+
     background-color: white
 }
 
@@ -163,32 +175,31 @@
     margin-bottom: 3px;
 }
 
-.active{
+
+.active {
     display: block;
 }
 
-.dot{
-    .dot__current{
+.dot {
+    .dot__current {
         display: none;
     }
 }
-.active_dot{
-    .dot__current{
+
+.active_dot {
+    .dot__current {
+
         display: block;
     }
 }
 
-.rc__text-thumb::after{
+
+.rc__text-thumb::after {
+
     content: '';
     width: 5px;
     height: 5px;
     background-color: #C7133E;
-    
-    
-}
-
-
-
 
 //   @media screen and (min-width: 320px) {
 //       width: 320px;
