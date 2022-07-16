@@ -46,19 +46,19 @@ fill: $color-accent;
 }
 .menu {
     @include desktop-close {
-//    display: none;
+   
     position: fixed;
     top: 0;
     right: 0;
     width: 250px;
     height: 100vh;
-    
+    z-index: 100;
     background-color: #E17992;
-    // transform: translateX(101%);
-    // transition: transform 250ms linear;
+    transform: translateX(101%);
+    transition: transform 250ms linear;
     &.is-open {
-        // transform: translateX(0);
-        display: block;
+        transform: translateX(0);
+      
     }
     @media screen and (min-width:768px) and (max-width:1199px) {
         width: 254px;
@@ -74,8 +74,9 @@ fill: $color-accent;
     display: flex;
     justify-content: space-between;
     height: 100%;
-    overflow-y: scroll;
+    
     @include desktop-close {
+        overflow-y: scroll;
         padding: 20px;
 flex-direction: column;
     }
