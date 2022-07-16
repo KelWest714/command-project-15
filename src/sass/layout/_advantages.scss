@@ -1,7 +1,7 @@
 .advantages {
     padding-top: 19px;
     padding-bottom: 49px;
-    background-color: var(--color-main-bg);
+    background-color: $color-footer-bg;
 
     @include tablet {
         padding-top: 33px;
@@ -17,27 +17,26 @@
 .advantages__list {
     @include tablet {
         display: flex;
+        margin-right: 180px;
     }
 }
 
 .advantages__item {
-    padding: 8px;
+    // padding: 8px;
 
     &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 32px;
     }
 
     @include tablet {
         &:not(:last-child) {
-            margin-right: 52px;
+            margin-right: 30px;
             margin-bottom: 0;
         }
     }
 
     @include desktop {
-        &:not(:last-child) {
-            margin-right: 32px;
-        }
+       margin-right: 132px;
     }
 
     &::before {
@@ -91,4 +90,12 @@
         font-size: 58px;
         line-height: 1.14;
     }
+}
+
+.advantages__text{
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $color-main-text;
 }
