@@ -1,3 +1,94 @@
-.advantages{
-    background-color: #fff5f6;
+.advantages {
+    padding-top: 19px;
+    padding-bottom: 49px;
+    background-color: var(--color-main-bg);
+
+    @include tablet {
+        padding-top: 33px;
+        padding-bottom: 70px;
+    }
+
+    @include desktop {
+        padding-top: 20px;
+        padding-bottom: 69px;
+    }
+}
+
+.advantages__list {
+    @include tablet {
+        display: flex;
+    }
+}
+
+.advantages__item {
+    padding: 8px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @include tablet {
+        &:not(:last-child) {
+            margin-right: 52px;
+            margin-bottom: 0;
+        }
+    }
+
+    @include desktop {
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
+    }
+
+    &::before {
+        display: block;
+        content: "";
+        height: 50px;
+        background-repeat: no-repeat;
+        margin-bottom: 16px;
+
+        @include tablet {
+            margin-bottom: 36px;
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
+        }
+    }
+
+    &:nth-child(1)::before {
+        background-image: url(../images/adv-milk.png);
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(../images/adv-apples.png);
+    }
+
+    &:nth-child(3)::before {
+        background-image: url(../images/adv-heart.png);
+    }
+
+}
+
+.advantages__title {
+    font-family: Titan One;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-bottom: 14px;
+
+    @include tablet {
+        margin-bottom: 13px;
+        font-size: 48px;
+        line-height: 1.46;
+    }
+
+    @include desktop {
+        margin-bottom: 15px;
+        font-size: 58px;
+        line-height: 1.14;
+    }
 }
