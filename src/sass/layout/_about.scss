@@ -1,10 +1,11 @@
 .about {
-    background-color: $color-footer-bg;
-    text-align: center;
-    background-image: url(/src/images/mobile-about-milk.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-y: 80%;
+  background-color: $color-footer-bg;
+  text-align: center;
+  background-image: url(/src/images/mobile-about-milk.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 80%;
+
 
     @mixin mobile {
         background-image: url(/src/images/mobile-about-milk.png);
@@ -13,8 +14,7 @@
         screen and (min-resolution: 2dppx) {
             background-image: url(/src/images/mobile-about-milk@2x.png);
         }
-    }
-
+        
     @mixin desktop {
         background-image: url(/src/images/desktop-about-milk.png);
         @media screen and (min-device-pixel-ratio: 2),
@@ -22,8 +22,7 @@
             screen and (min-resolution: 2dppx) {
                 background-image: url(/src/images/desktop-about-milk@2x.png);
             }
-    }
-}
+
 
 .about__containeir {
     margin: 0 auto;

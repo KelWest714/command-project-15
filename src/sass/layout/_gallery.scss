@@ -1,0 +1,234 @@
+// ==================== Mob =================================================
+$height: 136px;
+$width: 320px;
+
+$s1: 43px;
+$s2: 89px;
+
+$h1: 45px;
+$h2: 28px;
+$h3: 31px;
+$h4: 21px;
+$h5: 49px;
+
+$offset: calc(($width - ($s1 * 7)) / 6);
+
+.gallery {
+  background: linear-gradient(#fff5f6 20%, #ffffff 20%);
+  margin-bottom: 60px;
+
+  &__sizer {
+    max-height: $height;
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.grid {
+  &__gutter-sizer {
+    width: $offset;
+  }
+
+  &__item {
+    margin-bottom: $offset;
+  }
+
+  &__stamp {
+    position: absolute;
+
+    &-1 {
+      height: $h1;
+      width: $s1;
+    }
+    &-2 {
+      height: $h2;
+      width: calc($s1 * 2 + $offset);
+    }
+    &-3 {
+      height: $h3;
+      width: calc($s1 * 1);
+      left: calc($s1 * 4 + ($offset * 4));
+    }
+    &-4 {
+      height: $h4;
+      width: calc($s1 * 1);
+      left: calc($s1 * 5 + ($offset * 5));
+    }
+    &-5 {
+      height: $h5;
+      width: $s1;
+      right: 0;
+    }
+  }
+
+  &__img-height-1 {
+    height: $s1;
+    width: $s1;
+    display: block;
+  }
+
+  &__img-height-2 {
+    height: $s2;
+    width: $s2;
+    display: block;
+  }
+}
+
+// ==================== Tab ===================================================
+@media screen and (min-width: 768px) {
+  $height: 327px;
+  $width: 768px;
+
+  $s1: 105px;
+  $s2: 214px;
+
+  $h1: 108px;
+  $h2: 67px;
+  $h3: 75px;
+  $h4: 50px;
+  $h5: 117px;
+
+  $offset: calc(($width - ($s1 * 7)) / 6);
+
+  .gallery {
+    background: linear-gradient(#fff5f6 57%, #ffffff 57%);
+    margin-bottom: 60px;
+
+    &__sizer {
+      max-height: $height;
+      max-width: $width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .grid {
+    &__gutter-sizer {
+      width: $offset;
+    }
+
+    &__item {
+      margin-bottom: $offset;
+    }
+
+    &__stamp {
+      position: absolute;
+
+      &-1 {
+        height: $h1;
+        width: $s1;
+      }
+      &-2 {
+        height: $h2;
+        width: calc($s1 * 2 + $offset);
+      }
+      &-3 {
+        height: $h3;
+        width: calc($s1 * 1);
+        left: calc($s1 * 4 + ($offset * 4));
+      }
+      &-4 {
+        height: $h4;
+        width: calc($s1 * 1);
+        left: calc($s1 * 5 + ($offset * 5));
+      }
+      &-5 {
+        height: $h5;
+        width: $s1;
+        right: 0;
+      }
+    }
+
+    &__img-height-1 {
+      height: $s1;
+      width: $s1;
+      display: block;
+    }
+
+    &__img-height-2 {
+      height: $s2;
+      width: $s2;
+      display: block;
+    }
+  }
+}
+
+// ==================== DT ====================================================
+@media screen and (min-width: 1200px) {
+  $height: 430px;
+  $width: 1013px;
+
+  $s1: 138px;
+  $s2: 283px;
+
+  $h1: 143px;
+  $h2: 89px;
+  $h3: 99px;
+  $h4: 66px;
+  $h5: 155px;
+
+  $offset: calc(($width - ($s1 * 7)) / 6);
+
+  .gallery {
+    background: linear-gradient(#fff5f6 20%, #ffffff 20%);
+    margin-bottom: 120px;
+
+    &__sizer {
+      max-height: $height;
+      max-width: $width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .grid {
+    &__gutter-sizer {
+      width: $offset;
+    }
+
+    &__item {
+      margin-bottom: $offset;
+    }
+
+    &__stamp {
+      position: absolute;
+
+      &-1 {
+        height: $h1;
+        width: $s1;
+      }
+      &-2 {
+        height: $h2;
+        width: calc($s1 * 2 + $offset);
+      }
+      &-3 {
+        height: $h3;
+        width: calc($s1 * 1);
+        left: calc($s1 * 4 + ($offset * 4));
+      }
+      &-4 {
+        height: $h4;
+        width: calc($s1 * 1);
+        left: calc($s1 * 5 + ($offset * 5));
+      }
+      &-5 {
+        height: $h5;
+        width: $s1;
+        right: 0;
+      }
+    }
+
+    &__img-height-1 {
+      height: $s1;
+      width: $s1;
+      display: block;
+    }
+
+    &__img-height-2 {
+      height: $s2;
+      width: $s2;
+      display: block;
+    }
+  }
+}
