@@ -1,26 +1,26 @@
 .about {
     background-color: $color-footer-bg;
     text-align: center;
-    background-image: url(/src/images/mobile-about-milk.png);
+    background-image: url(./images/mobile-about-milk.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-y: 80%;
 
     @mixin mobile {
-        background-image: url(/src/images/mobile-about-milk.png);
+        background-image: url(./images/mobile-about-milk.png);
         @media screen and (min-device-pixels-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: url(/src/images/mobile-about-milk@2x.png);
+            background-image: url(./images/mobile-about-milk@2x.png);
         }
     }
 
     @mixin desktop {
-        background-image: url(/src/images/desktop-about-milk.png);
+        background-image: url(./images/desktop-about-milk.png);
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-                background-image: url(/src/images/desktop-about-milk@2x.png);
+                background-image: url(./images/desktop-about-milk@2x.png);
             }
     }
 }
@@ -109,8 +109,12 @@
 .about__more-text {
     display: flex;
     flex-direction: column;
-    
-    @include screen and (min-width: 768px) and (max-width: 1199px) {
+
+    @mixin tablet {
+        margin-left: 17px;
+    }
+
+    @mixin desktop-close {
         margin-left: 17px;
     }
     
@@ -140,19 +144,27 @@
 .text-item__two-part {
     color: $color-second-text;
     margin-bottom: 20px;
+
+    @mixin tablet {
+        margin-bottom: 40px;
+    }
     
-    @include screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-bottom: 40px;
+    @mixin desktop-close {
+        margin-bottom: 40px;
     }
 }
     
 .text-item__three-part {
         color: $color-second-text;
         margin-bottom: 26px;
-    
-        @include screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-bottom: 62px;
-        }
+
+        @mixin tablet {
+                margin-bottom: 62px;
+            }
+        
+            @mixin desktop-close {
+                margin-bottom: 62px;
+            }
     
         @mixin desktop {
             margin-bottom: 32px;

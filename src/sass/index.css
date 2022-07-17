@@ -126,7 +126,7 @@ body {
 .about {
   background-color: #FFF5F6;
   text-align: center;
-  background-image: url(/src/images/mobile-about-milk.png);
+  background-image: url(./images/mobile-about-milk.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 80%;
@@ -164,16 +164,61 @@ body {
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
-  .about__flexbox {
-    align-items: center;
-  }
-}
-
 .flexbox {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about__more-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-item__par {
+  margin-bottom: 35px;
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  text-align: left;
+}
+
+.text-item__two-part {
+  color: #907E82;
+  margin-bottom: 20px;
+}
+
+.text-item__three-part {
+  color: #907E82;
+  margin-bottom: 26px;
+}
+
+.about__btn {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  display: inline-flex;
+  min-width: 176px;
+  min-height: 44px;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #D41443;
+  background-color: #ffffff;
+  border-radius: 22px;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+
+.about__btn:hover {
+  margin-left: 14px;
+  color: #ECEBEB;
+}
+
+.about__item {
+  overflow: hidden;
 }
 
 .advantages {
