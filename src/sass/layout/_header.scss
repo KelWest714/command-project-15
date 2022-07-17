@@ -1,21 +1,26 @@
 .page-header {
+    position: absolute;
+  
+    width: 100%;
     padding-top: 4px;
-    background-color: $color-main-bg;
+z-index: 5;
     @include tablet {
         padding-top: 32px;
     }
+
     @include desktop {
         padding-top: 37px;
     }
 }
+
 .container--flex {
     @include desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
 }
+
 .page-header__container {
     display: flex;
     align-items: center;
@@ -29,62 +34,74 @@
 .mobile-menu-open {
     @include desktop-close {
         display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            margin-left: auto;
-            border: none;
-            background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        border: none;
+        background-color: transparent;
     }
+
     @include desktop {
         display: none;
     }
 }
+
 .mobile-menu-open__icon {
-fill: $color-accent;
+    fill: $color-accent;
 }
+
 .menu {
     @include desktop-close {
-   
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100vh;
-    z-index: 100;
-    background-color: #E17992;
-    transform: translateX(101%);
-    transition: transform 250ms linear;
-    &.is-open {
-        transform: translateX(0);
-      
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 100;
+        background-color: #E17992;
+        transform: translateX(101%);
+        transition: transform 250ms linear;
+
+        &.is-open {
+            transform: translateX(0);
+
+        }
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+            width: 254px;
+        }
     }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        width: 254px;
-    }
-    }
+
     @include desktop {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
+
 .menu__container {
     display: flex;
     justify-content: space-between;
     height: 100%;
-    
+
     @include desktop-close {
         overflow-y: scroll;
-        padding: 20px;
-flex-direction: column;
+        padding: 20px 20px 80px;
+        flex-direction: column;
     }
-       @include desktop {
+
+    @include desktop {
         justify-content: center;
         align-items: center;
         flex-direction: row-reverse;
-       }
+    }
+}
+.container-button-menu {
+    display: flex;
+    flex-direction: column;
 }
 .mobile-menu-close {
     margin-left: auto;
@@ -93,49 +110,54 @@ flex-direction: column;
     height: 32px;
     background-color: transparent;
     border: none;
+
     @include desktop {
-            display: none;
-        }
+        display: none;
+    }
 }
 
 .mobile-menu-close__icon {
     fill: #fff;
-    
+
 }
+
 .button-buy-tablet {
-        display: none;
+    display: none;
+
     @media screen and (min-width:768px) and (max-width:1199px) {
-display: flex;
-align-items: center;
-justify-content: center;
-margin-left: 32px;
-width: 160px;
-height: 44px;
-padding-left: 37.23px;
-padding-right: 37.23px;
-background-color: $color-white;
-border: none;
-border-radius: 22px;
-@include font(700, 16px, 21px, null);
-transition: background-color 250ms linear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+        width: 160px;
+        height: 44px;
+        padding-left: 37.23px;
+        padding-right: 37.23px;
+        background-color: $color-white;
+        border: none;
+        border-radius: 22px;
+        @include font(700, 16px, 21px, null);
+        transition: background-color 250ms linear;
 
-    &:hover,
-    &:focus {
-        background-color: $color-button-hover;
+        &:hover,
+        &:focus {
+            background-color: $color-button-hover;
+        }
     }
-}
 
 }
+
 .button-buy-tablet__text {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 44px;
-        width: 69.43px;
-        color: $color-accent;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 69.43px;
+    color: $color-accent;
 
-       
+
 }
+
 .button-buy {
     display: flex;
     align-items: center;
@@ -150,16 +172,18 @@ transition: background-color 250ms linear;
     border-radius: 22px;
     @include font(700, 16px, 21px, null);
     transition: background-color 250ms linear;
-    
+
     &:hover,
     &:focus {
         background-color: $color-button-hover;
     }
+
     @include tablet {
-     width: 186px;
-     padding-left: 43.28px;
-     padding-right: 43.28px;
+        width: 186px;
+        padding-left: 43.28px;
+        padding-right: 43.28px;
     }
+
     @include desktop {
         width: 159px;
         padding-left: 37px;
@@ -176,9 +200,11 @@ transition: background-color 250ms linear;
     height: 44px;
     width: 90.7px;
     color: $color-accent;
+
     @include tablet {
-     width: 80.72px;
+        width: 80.72px;
     }
+
     @include desktop {
         width: 69px;
     }
@@ -186,45 +212,34 @@ transition: background-color 250ms linear;
 
 .button-buy__icon {
     fill: $color-accent;
+
     @include tablet {
-           width: 18px;
-        }
-        @include desktop {
-            width: 16px;
-        }
+        width: 18px;
+    }
+
+    @include desktop {
+        width: 16px;
+    }
 }
 
-.page-header__nav {
-
-}
+.page-header__nav {}
 
 .page-header__list {
-@include desktop {
-    display: flex;
-    margin-left: 128px;
-}
+    @include desktop {
+        display: flex;
+        margin-left: 128px;
+    }
 }
 
 .page-header__items {
-   @include desktop-close {
-    position: relative;
-    
+    @include desktop-close {
+        position: relative;
+
         &:not(:last-child) {
             margin-bottom: 23px;
         }
-&::before {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 1px;
-        width: 254px;
-        background-color: #E18298;
-        transform: translate(-20px, - 11.5px);
-    }
 
-    &:last-child {
-        &::after {
+        &::before {
             content: " ";
             position: absolute;
             top: 0;
@@ -232,15 +247,28 @@ transition: background-color 250ms linear;
             height: 1px;
             width: 254px;
             background-color: #E18298;
-            transform: translate(-20px, 30px);
+            transform: translate(-20px, - 11.5px);
+        }
+
+        &:last-child {
+            &::after {
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                width: 254px;
+                background-color: #E18298;
+                transform: translate(-20px, 30px);
+            }
         }
     }
-   }
-  @include desktop {
-    &:not(:first-child) {
-        margin-left: 35px;
+
+    @include desktop {
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
     }
-  }
 }
 
 .page-header__link {
@@ -250,8 +278,8 @@ transition: background-color 250ms linear;
     color: $color-white;
     transition: color 250ms linear;
 
-     &:hover,
-     &:focus {
+    &:hover,
+    &:focus {
         color: $color-accent;
-     }
+    }
 }

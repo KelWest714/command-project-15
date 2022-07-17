@@ -4,19 +4,32 @@
             customer rewievs
         </h2>
         <div class="wrapper">
-            <div class="rc__sliders">
+            <div class="rc__slider">
                 <div class="slide active">
-                    <img class="icon" src="../src/images/customers/CR.png" alt="">
+                    <img class="icon" srcset="
+                                  ./images/customers/CR.png     1x,
+                                  ./images/customers/CR@2x.png  2x,
+                                  ./images/customers/CR@3x.png  3x
+                    " src="./images/customers/CR.png" alt="Emily" />
+
                 </div>
                 <div class="slide ">
-                    <img class="icon" src="../src/images/customers/CR2.png" alt="">
+                    <img class="icon" srcset="
+                          ./images/customers/CR2.png     1x,
+                          ./images/customers/CR2@2x.png  2x,
+                          ./images/customers/CR2@3x.png  3x
+                    " src="./images/customers/CR2.png" alt="Afrodita" />
                 </div>
                 <div class="slide ">
-                    <img class="icon" src="../src/images/customers/CR3.png" alt="">
+                    <img class="icon" srcset="
+                          ./images/customers/CR3.png     1x,
+                          ./images/customers/CR3@2x.png  2x,
+                          ./images/customers/CR3@3x.png  3x
+                    " src="./images/customers/CR3.png" alt="Solomija" />
                 </div>
 
-                <div id="btn-prev"></div>
-                <div id="btn-next"></div>
+                <div id="btn-prev"><</div>
+                <div id="btn-next">></div>
             </div>
             <div class="feedback active">
                 <div class="rc__text-thumb">
@@ -30,11 +43,6 @@
                             congue. Lorem ipsum primis in nibh vel risus.
                         </p>
                     </div>
-                </div>
-                <div class="rc__dot_block">
-                    <span class="dots "></span>
-                    <span class="dots"></span>
-                    <span class="dots"></span>
                 </div>
 
                 <h3 class="rc-subtitle">
@@ -54,15 +62,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="rc__dot_block">
-                    <span class="dots "></span>
-                    <span class="dots"></span>
-                    <span class="dots"></span>
-                </div>
-
 
                 <h3 class="rc-subtitle">
-                    Afrodita, Milan
+                    Afrodita, Chicago
                 </h3>
             </div>
 
@@ -71,20 +73,15 @@
                     <div class="rc__bottom-border">
                         <p class="rc__text">
                             I love ice cream, so I bought it for private use at home.
-                            Namely, I ate ice cream first and then a cup,
+                            Namely, I ate ice cream first then a cup,
                             so tastier. Although once she tried to eat on the contrary, as a result her hands, cupboard
                             and ceiling were dirty.
                         </p>
                     </div>
                 </div>
-                <div class="rc__dot_block">
-                    <span class="dots "></span>
-                    <span class="dots"></span>
-                    <span class="dots"></span>
-                </div>
 
                 <h3 class="rc-subtitle">
-                    Solomija, Lviv
+                    Solomija, New York
                 </h3>
             </div>
 
@@ -109,4 +106,4 @@
         </div>
     </section>
     
-    <script src="index.js"></script>
+    <script src="./partials/js/customer.js"></script>

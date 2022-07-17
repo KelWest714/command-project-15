@@ -65,3 +65,5 @@ dots.forEach((item, indexDot) => {
 
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
+
+// setInterval(nextSlide, 2500);
