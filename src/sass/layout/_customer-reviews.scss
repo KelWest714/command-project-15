@@ -31,7 +31,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-                padding: 31px 74px;
+        padding: 31px 74px;
     }
 
 }
@@ -45,7 +45,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 258%;
+    line-height: 260%;
     text-align: center;
     color: #000000;
     margin: 0 8px 0 15px;
@@ -55,7 +55,7 @@
         margin: 0 45px 0 49px;
 
         font-size: 14px;
-        line-height: 221%;
+        line-height: 222%;
         letter-spacing: 0.04em;
     }
 
@@ -66,7 +66,8 @@
 
     }
 }
-.rc__text-thumb::before{
+
+.rc__text-thumb::before {
     content: '';
     background-image: url(../images/customers/CRLapky.png);
     width: 54px;
@@ -76,6 +77,7 @@
     position: absolute;
     top: 30px;
     left: 53px;
+
     @media screen and (min-width: 768px) {
         top: 20px;
         left: 6px;
@@ -84,6 +86,7 @@
     @media screen and (min-width: 1200px) {
         top: 32px;
         left: 72px;
+        line-height: 194%;
 
     }
 
@@ -95,7 +98,7 @@
     justify-content: center;
 }
 
-.rc__slider{
+.rc__slider {
     position: relative;
 }
 
@@ -105,7 +108,7 @@
     position: relative;
 }
 
-.rc-subtitle::before{
+.rc-subtitle::before {
     content: '';
     position: absolute;
     background-image: url(../images/customers/dots.png);
@@ -114,9 +117,10 @@
     background-size: contain;
     left: 46%;
     bottom: 35px;
+
     @media screen and (min-width: 768px) {
         left: 48%;
-        }
+    }
 }
 
 .wrapper {
@@ -124,7 +128,8 @@
 
 }
 
-#btn-next,#btn-prev {
+#btn-next,
+#btn-prev {
     position: absolute;
     text-decoration: none;
     display: inline-block;
@@ -154,7 +159,12 @@
     color: black;
 }
 
-
+.rc-subtitle {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-top: 36px;
+    position: relative;
+}
 
 #btn-prev {
     left: 0;
@@ -216,11 +226,13 @@
     }
 }
 
-
-.rc__text-thumb::after {
-
+.rc-subtitle::before {
     content: '';
-    width: 5px;
-    height: 5px;
-    background-color: #C7133E;
+    background-image: url(../images/customers/CRDots.png);
+    width: 32px;
+    height: 4px;
+    top: 16px;
+    left: 49%;
+    color: #C7133E;
+    position: absolute;
 }
