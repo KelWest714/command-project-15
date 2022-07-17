@@ -166,7 +166,6 @@ dots.forEach((item, indexDot) => {
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
 
-// })();
 
 // next.addEventListener('click', nextSlide);
 // prev.addEventListener('click', prevSlide);
