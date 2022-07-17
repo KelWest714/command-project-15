@@ -10,6 +10,8 @@
   --color-main-text: #000000;
   --color-second-text: #907E82;
   --color-button-hover: #ECEBEB;
+  --icon-color: #fea5bb;
+  --backdrop-color: rgba(75, 41, 49, 0.774);
 }
 
 //  SASS Vars
@@ -23,3 +25,7 @@ $color-card-green: #C2E297;
 $color-main-text: #000000;
 $color-second-text: #907E82;
 $color-button-hover: #ECEBEB;
+$icon-color: #fea5bb;
+$backdrop-color: rgba(75, 41, 49, 0.774);
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

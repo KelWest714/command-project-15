@@ -10,23 +10,29 @@
       rel="stylesheet"
     />
     <title>Page title</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
     <include src="./partials/hero.html"></include>
-   <include src="./partials/products.html"></include>
-    </include src="./partials/about.html"></include> 
+    <include src="./partials/products.html"></include>
+    <include src="./partials/about.html"></include>
     <include src="./partials/advantages.html"></include>
     <include src="./partials/gallery.html"></include>
     <include src="./partials/customer-reviews.html"></include>
     <include src="./partials/contacts.html"></include>
     <include src="./partials/footer.html"></include>
     <include src="./partials/modals.html"></include>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="module" src="./partials/js/menu.js"></script>
+    <script type="module" src="./partials/js/modals.js"></script>
+    <script type="module" src="./partials/js/slider.js"></script>
+    <script type="module" src="./masonry/gallery.js"></script>
   </body>
-  <script src="/src/masonry/gallery.js" type="module"></script>
 </html>
