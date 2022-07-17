@@ -1,188 +1,190 @@
 .about {
-  background-color: $color-footer-bg;
-  text-align: center;
-  background-image: url(/src/images/mobile-about-milk.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: 80%;
+    background-color: $color-footer-bg;
+    text-align: center;
+    background-image: url(/src/images/mobile-about-milk.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 80%;
 
 
     @mixin mobile {
         background-image: url(/src/images/mobile-about-milk.png);
+
         @media screen and (min-device-pixels-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
             background-image: url(/src/images/mobile-about-milk@2x.png);
         }
-        
-    @mixin desktop {
-        background-image: url(/src/images/desktop-about-milk.png);
-        @media screen and (min-device-pixel-ratio: 2),
+
+        @mixin desktop {
+            background-image: url(/src/images/desktop-about-milk.png);
+
+            @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
                 background-image: url(/src/images/desktop-about-milk@2x.png);
             }
 
 
-.about__containeir {
-    margin: 0 auto;
-    padding-top: 125px;
-    padding-bottom: 40px;
-    width: 100%;
+            .about__containeir {
+                margin: 0 auto;
+                padding-top: 125px;
+                padding-bottom: 40px;
+                width: 100%;
 
-    @mixin mobile {
-            padding-top: 130px;
-            padding-bottom: 66px;
-        }
-    
-        @mixin tablet {
-            padding-top: 130px;
-            padding-bottom: 66px;
-        }
-    
-        @mixin desktop {
-            padding-top: 125px;
-            padding-bottom: 40px;
-        }
-}
+                @mixin mobile {
+                    padding-top: 130px;
+                    padding-bottom: 66px;
+                }
 
-.about__text {
-    font-size: 18px;
-    line-height: calc(21 / 18);
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-second-bg;
-    margin-bottom: 15px;
+                @mixin tablet {
+                    padding-top: 130px;
+                    padding-bottom: 66px;
+                }
 
-    @mixin desktop {
-        margin-bottom: 16px;
-    }
-}
+                @mixin desktop {
+                    padding-top: 125px;
+                    padding-bottom: 40px;
+                }
+            }
 
-.about__title {
-    margin-bottom: 32px;
-    font-size: calc(48 / 32);
-    line-height: 55px;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    
-    color: $color-accent;
-    
-    @mixin tablet{
-        margin-bottom: 40px;
-    }
-    
-    @mixin desktop {
-        margin-bottom: 60px;
-    }
-}
+            .about__text {
+                font-size: 18px;
+                line-height: calc(21 / 18);
+                text-align: center;
+                text-transform: uppercase;
+                color: $color-second-bg;
+                margin-bottom: 15px;
 
-.about__picture {
-    width: 100%;
-    border-radius: 20px;
-    transition: all .15s cubic-bezier(.4, 0, .2, 1);
+                @mixin desktop {
+                    margin-bottom: 16px;
+                }
+            }
 
-    @mixin tablet {
-        margin-bottom: 46px;
-    }
-}
+            .about__title {
+                margin-bottom: 32px;
+                font-size: calc(48 / 32);
+                line-height: 55px;
+                text-align: center;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
 
-.about__flexbox {
-    @mixin tablet-close {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    @mixin tablet {
-        align-items: center;
-    }
-}
+                color: $color-accent;
 
-.flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+                @mixin tablet {
+                    margin-bottom: 40px;
+                }
 
-.about__more-text {
-    display: flex;
-    flex-direction: column;
-    
-    @include screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-left: 17px;
-    }
-    
-    @mixin desktop {
-        margin-left: 74px;
-    }
-}
+                @mixin desktop {
+                    margin-bottom: 60px;
+                }
+            }
 
-.text-item__par {
-    margin-bottom: 35px;
-    color: $color-main-text;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.62;
-    text-align: left;
-    
-    @mixin tablet {
-        font-size: 14px;
-        line-height: 1.76;
-    }
-    
-    @mixin desktop {
-        font-size: 16px;
-    }
-}
+            .about__picture {
+                width: 100%;
+                border-radius: 20px;
+                transition: all .15s cubic-bezier(.4, 0, .2, 1);
 
-.text-item__two-part {
-    color: $color-second-text;
-    margin-bottom: 20px;
-    
-    @include screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-bottom: 40px;
-    }
-}
-    
-.text-item__three-part {
-        color: $color-second-text;
-        margin-bottom: 26px;
-    
-        @include screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-bottom: 62px;
-        }
-    
-        @mixin desktop {
-            margin-bottom: 32px;
-        }
-}
+                @mixin tablet {
+                    margin-bottom: 46px;
+                }
+            }
 
-.about__btn {
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    display: inline-flex;
-    min-width: 176px;
-    min-height: 44px;
-    
-    font-family: DM Sans;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.28;
-    
-    color: $color-accent;
-    background-color: $color-white;
-    border-radius: 22px;
-    border: 0 solid transparent;
-    cursor: pointer;
-}
+            .about__flexbox {
+                @mixin tablet-close {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
-.about__btn:hover {
-    margin-left: 14px;
-    color: $color-button-hover;
-}
+                @mixin tablet {
+                    align-items: center;
+                }
+            }
 
-.about__item {
-    overflow: hidden;
-}
+            .flexbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .about__more-text {
+                display: flex;
+                flex-direction: column;
+
+                @include screen and (min-width: 768px) and (max-width: 1199px) {
+                    margin-left: 17px;
+                }
+
+                @mixin desktop {
+                    margin-left: 74px;
+                }
+            }
+
+            .text-item__par {
+                margin-bottom: 35px;
+                color: $color-main-text;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1.62;
+                text-align: left;
+
+                @mixin tablet {
+                    font-size: 14px;
+                    line-height: 1.76;
+                }
+
+                @mixin desktop {
+                    font-size: 16px;
+                }
+            }
+
+            .text-item__two-part {
+                color: $color-second-text;
+                margin-bottom: 20px;
+
+                @include screen and (min-width: 768px) and (max-width: 1199px) {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .text-item__three-part {
+                color: $color-second-text;
+                margin-bottom: 26px;
+
+                @include screen and (min-width: 768px) and (max-width: 1199px) {
+                    margin-bottom: 62px;
+                }
+
+                @mixin desktop {
+                    margin-bottom: 32px;
+                }
+            }
+
+            .about__btn {
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                display: inline-flex;
+                min-width: 176px;
+                min-height: 44px;
+
+                font-family: DM Sans;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 1.28;
+
+                color: $color-accent;
+                background-color: $color-white;
+                border-radius: 22px;
+                border: 0 solid transparent;
+                cursor: pointer;
+            }
+
+            .about__btn:hover {
+                margin-left: 14px;
+                color: $color-button-hover;
+            }
+
+            .about__item {
+                overflow: hidden;
+            }
