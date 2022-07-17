@@ -1,68 +1,35 @@
-// .backdrop-geo {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(255, 165, 186, 0.5);
 
-//   opacity: 1;
-//   transform: scale(1);
-//   transition: all 250ms ease-in;
-// }
-
-// .is-hidden {
-//   pointer-events: none;
-
-//   opacity: 0;
-//   transform: scale(1.2);
-// }
-
-// .modal-geo {
-//   width: 280px;
-//   min-height: 80vh;
-//   background-color: white;
-//   padding: 20px;
-
-//   border: 1px solid $color-accent;
-
+// .modal-close-geo {
 //   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+//   top: 20px;
+//   right: 20px;
+
+//   width: 32px;
+//   height: 32px;
+//   display: block;
+//   border-radius: 50%;
+//   background-color: transparent;
+//   border: 1px solid $color-second-bg;
+//   color: $color-second-bg;
+
+//   margin-left: auto;
+
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   transition: all 250ms ease-in;
+
+//   &:hover,
+//   &:focus {
+//     border-color: $color-accent;
+//     color: $color-accent;
+//   }
 // }
 
-.modal-close-geo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-
-  width: 32px;
-  height: 32px;
-  display: block;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid $color-second-bg;
-  color: $color-second-bg;
-
-  margin-left: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 250ms ease-in;
-
-  &:hover,
-  &:focus {
-    border-color: $color-accent;
-    color: $color-accent;
-  }
-}
-
-.modal-close__icon {
-  fill: currentColor;
-}
+// .modal-close__icon {
+//   fill: currentColor;
+// }
 
 // .no-scroll {
 //   overflow: hidden;
@@ -70,7 +37,8 @@
 
 // Buy now modal form-------------------------------------
 .modal,
-.modal-geo {
+.modal-geo,
+.franchise-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,6 +55,9 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px 40px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 8px;
 
   z-index: 9999;
 
@@ -114,11 +85,16 @@
 }
 
 .backdrop,
-.backdrop-geo {
+.backdrop-geo,
+.backdrop-franchise
+ {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: $backdrop-color;
+  
+  
+
 
   top: 0;
   left: 0;
@@ -138,7 +114,7 @@
   width: 30px;
   height: 30px;
   margin-left: auto;
-  background-color: $color-accent;
+  background: linear-gradient(-45deg, #f857a6, #ff5858);
   fill: $color-white;
   border: none;
   border-radius: 50%;
@@ -148,12 +124,12 @@
   cursor: pointer;
   transition: box-shadow fill 250ms $timing-function;
 
-  // &:hover,
-  // &:focus {
+   &:hover,
+   &:focus {
     box-shadow: 0 0 30px $color-accent;
     box-shadow: 0 0 20px $color-main-bg;
     fill: $icon-color;
-  // }
+   }
 }
 
 .form-field {
@@ -190,6 +166,7 @@
   border-radius: 8px;
   border: 1px solid $color-accent;
   width: 100%;
+  height: auto;
   padding-left: 26px;
   padding-right: 2px;
   color: $color-accent;
@@ -212,27 +189,36 @@
 }
 
 .submit-button {
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: $color-accent;
-  background: $color-white;
-  border-radius: 22px;
-  border: none;
-  padding: 12px 36px;
-  margin-left: 30px;
-  z-index: 3;
-  transition-property: background-color, font-size, line-height, margin-left;
-  transition-duration: 250ms;
-  transition-timing-function: $timing-function;
 
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
+  background: linear-gradient(-45deg, #f857a6, #ff5858);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 21px;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    color: #FFF;
+    font-size: 18px;
+    cursor: pointer;
+    transform: translateX(-50%);
+  
+    &:hover:before {
+      left: 110%;
+      transition: .3s;
+    }
+  
+    &:before {
+      content: '';
+      background: rgba(#FFF, .3);
+      height: 100%;
+      width: 65px;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      transform: skew(-45deg);
+      transition: 0s;
   }
 
   @include mobile {
@@ -241,7 +227,7 @@
     &:focus {
       font-size: 18px;
       line-height: 1.3;
-      margin-left: 20px;
+      // margin-left: 20px;
     }
   }
 
@@ -251,7 +237,7 @@
     &:focus {
       font-size: 18px;
       line-height: 1.3;
-      margin-left: 20px;
+      // margin-left: 20px;
     }
   }
 
@@ -271,9 +257,10 @@
 .form-input__icon {
   position: absolute;
   fill: $color-accent;
-  top: 50%;
+  top: 52%;
   left: 3px;
   transform: translateY(-50%);
+  
 }
 
 .form-input__wrappy {
@@ -306,3 +293,19 @@
     color: $color-accent;
   }
 }
+ 
+.geo-frame{
+  padding-top: 10%;
+}
+
+// Franchise
+.franchise-modal__text{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+
+
+
