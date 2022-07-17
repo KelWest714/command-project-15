@@ -2,61 +2,64 @@
   <div class="container">
     <p class="about__subtitle">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
-    <picture>
-      <source
-        srcset="
-          ./images/desktop-about-cow.png    1x,
-          ./images/desktop-about-cow@2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
+    <div class="about__wrap">
+      <picture>
+        <source
+          srcset="
+            ./images/desktop-about-cow.png    1x,
+            ./images/desktop-about-cow@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
 
-      <source
-        srcset="
-          ./images/tablet-about-cow.png    1x,
-          ./images/tablet-about-cow@2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="
-          ./images/mobile-about-cow.png    1x,
-          ./images/mobile-about-cow@2x.png 2x
-        "
-      />
+        <source
+          srcset="
+            ./images/tablet-about-cow.png    1x,
+            ./images/tablet-about-cow@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/mobile-about-cow.png    1x,
+            ./images/mobile-about-cow@2x.png 2x
+          "
+        />
 
-      <img
-        class="about__image image"
-        src="./images/mobile-about-cow.png"
-        alt="cow"
-      />
-    </picture>
-    <ul class="about__list list">
-      <li class="about__item">
-        <p class="about__description">
-          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
-          justo fringilla.
-        </p>
-      </li>
-      <li class="about__item">
-        <p class="about__text">
-          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-          tincidunt.
-        </p>
-      </li>
-      <li class="about__item">
-        <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
-      </li>
-    </ul>
-
-    <button class="about__button" type="button">
-      Read more
-      <svg class="about__icon" width="15" height="15">
-        <use href="./images/sprite.svg#icon-next"></use>
-      </svg>
-    </button>
+        <img
+          class="about__image image"
+          src="./images/mobile-about-cow.png"
+          alt="cow"
+        />
+      </picture>
+      <div class="list__wrap">
+        <ul class="about__list list">
+          <li class="about__item">
+            <p class="about__description">
+              Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel
+              justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend
+              erat at justo fringilla.
+            </p>
+          </li>
+          <li class="about__item">
+            <p class="about__text">
+              Curabitur lacinia enim at ex blandit, vel pellentesque odio
+              elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum
+              euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
+              Cras massa nibh, tincidunt.
+            </p>
+          </li>
+          <li class="about__item">
+            <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
+          </li>
+        </ul>
+        <button class="about__button" type="button">
+          Read more
+          <svg class="about__icon" width="15" height="15">
+            <use href="./images/sprite.svg#icon-next"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>

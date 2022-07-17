@@ -11,6 +11,20 @@
   @include retina {
     background-image: url(../images/mobile-about-milk@2x.png);
   }
+
+  @include tablet {
+    background-image: none;
+    padding-bottom: 30px;
+  }
+
+  @include desktop {
+    background-image: url(../images/desktop-about-milk.png);
+    background-position-y: 95%;
+
+    @include retina {
+      background-image: url(../images/desktop-about-milk@2x.png);
+    }
+  }
 }
 
 .about__subtitle {
@@ -20,8 +34,17 @@
   @include font(400, 18, 21, null);
   text-align: center;
   text-transform: uppercase;
-
   color: $color-second-bg;
+
+  @include tablet {
+    margin-bottom: 16px;
+
+    @include font(400, 26, 30, null);
+  }
+
+  @include desktop {
+    @include font(400, 30, 34, .04em);
+  }
 }
 
 .about__title {
@@ -32,27 +55,80 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-accent;
+
+  @include tablet {
+    margin-bottom: 40px;
+    @include font(400, 48, 55, .04em);
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+    @include font(400, 58, 66, .06em);
+  }
+}
+
+.about__wrap {
+  @include tablet {
+    display: flex;
+  }
 }
 
 .about__image {
   margin-bottom: 40px;
   width: 280px;
   height: 279px;
+
+  @include tablet {
+    margin-right: 32px;
+    margin-bottom: 0px;
+    width: 336px;
+    height: 335px;
+  }
+
+  @include desktop {
+    margin-right: 99px;
+    margin-bottom: 0px;
+    width: 501px;
+    height: 501px;
+  }
 }
 
 .about__list {
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-top: 90px;
+    margin-bottom: 40px;
+  }
 }
 
 .about__item {
   margin-bottom: 28px;
 
+  @include desktop {
+    margin-bottom: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &:nth-child(2) {
     margin-bottom: 25px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
   }
 }
-
-
 
 .about__description {
   max-width: 220px;
@@ -60,6 +136,17 @@
   font-size: 12px;
   line-height: 162%;
   color: $color-main-text;
+
+  @include tablet {
+    max-width: 334px;
+    font-size: 14px;
+    line-height: 176%;
+  }
+
+  @include desktop {
+    max-width: 463px;
+    font-size: 16px;
+  }
 }
 
 .about__text {
@@ -68,6 +155,17 @@
   font-size: 12px;
   line-height: 162%;
   color: $color-second-text;
+
+  @include tablet {
+    max-width: 334px;
+    font-size: 14px;
+    line-height: 176%;
+  }
+
+  @include desktop {
+    max-width: 463px;
+    line-height: 194%;
+  }
 }
 
 .about__button {
@@ -83,6 +181,13 @@
   background-color: $color-white;
   border: none;
   border-radius: 22px;
+
+  @include tablet {
+    @include font(700, 16, 21, null);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+  }
 
   &:hover,
   &:focus {
