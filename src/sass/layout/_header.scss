@@ -84,7 +84,7 @@ z-index: 5;
 
 .menu__container {
     display: flex;
-    justify-content: space-between;
+    
     height: 100%;
 
     @include desktop-close {
