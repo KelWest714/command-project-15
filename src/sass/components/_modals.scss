@@ -1,4 +1,3 @@
-
 // .modal-close-geo {
 //   position: absolute;
 //   top: 20px;
@@ -86,15 +85,11 @@
 
 .backdrop,
 .backdrop-geo,
-.backdrop-franchise
- {
+.backdrop-franchise {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: $backdrop-color;
-  
-  
-
 
   top: 0;
   left: 0;
@@ -124,73 +119,71 @@
   cursor: pointer;
   transition: box-shadow fill 250ms $timing-function;
 
-   &:hover,
-   &:focus {
+  &:hover,
+  &:focus {
     box-shadow: 0 0 30px $color-accent;
     box-shadow: 0 0 20px $color-main-bg;
     fill: $icon-color;
-   }
-
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-field__button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-title {
-  width: 210px;
-  font-family: Titan One, cursive;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: $color-accent;
-  text-shadow: 0 0 5px #ece2e4, 0 0 10px #ece2e4, 0 0 15px #ece2e4;
-
-  @include desktop {
-    width: 400px;
   }
-}
 
-.form-input {
-  border-radius: 8px;
-  border: 1px solid $color-accent;
-  width: 100%;
-  height: auto;
-  padding-left: 26px;
-  padding-right: 2px;
-  color: $color-accent;
-  outline: none;
-}
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
 
-.form-input__text {
-  color: $color-white;
-  margin-bottom: 3px;
-}
+  .form-field__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-.form-field__select {
-  border-radius: 8px;
-  outline: none;
-  border: 1px solid $color-accent;
-  padding-left: 26px;
-  padding-right: 2px;
-  color: $color-accent;
-  width: 100%;
-}
+  .modal-title {
+    width: 210px;
+    font-family: Titan One, cursive;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $color-accent;
+    text-shadow: 0 0 5px #ece2e4, 0 0 10px #ece2e4, 0 0 15px #ece2e4;
 
-.submit-button {
+    @include desktop {
+      width: 400px;
+    }
+  }
 
-  background: linear-gradient(-45deg, #f857a6, #ff5858);
+  .form-input {
+    border-radius: 8px;
+    border: 1px solid $color-accent;
+    width: 100%;
+    height: auto;
+    padding-left: 26px;
+    padding-right: 2px;
+    color: $color-accent;
+    outline: none;
+  }
+
+  .form-input__text {
+    color: $color-white;
+    margin-bottom: 3px;
+  }
+
+  .form-field__select {
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid $color-accent;
+    padding-left: 26px;
+    padding-right: 2px;
+    color: $color-accent;
+    width: 100%;
+  }
+
+  .submit-button {
+    background: linear-gradient(-45deg, #f857a6, #ff5858);
     padding: 10px 20px;
     border: none;
     border-radius: 21px;
@@ -199,19 +192,19 @@
     position: absolute;
     bottom: 30px;
     left: 50%;
-    color: #FFF;
+    color: #fff;
     font-size: 18px;
     cursor: pointer;
     transform: translateX(-50%);
-  
+
     &:hover:before {
       left: 110%;
-      transition: .3s;
+      transition: 0.3s;
     }
-  
+
     &:before {
       content: '';
-      background: rgba(#FFF, .3);
+      background: rgba(#fff, 0.3);
       height: 100%;
       width: 65px;
       position: absolute;
@@ -219,91 +212,86 @@
       left: -100%;
       transform: skew(-45deg);
       transition: 0s;
-  }
-
-  @include mobile {
-    &:hover,
-    &:focus {
-      font-size: 18px;
-      line-height: 1.3;
-      // margin-left: 20px;
     }
-  }
 
-  @include tablet {
-    &:hover,
-    &:focus {
-      font-size: 18px;
-      line-height: 1.3;
-      // margin-left: 20px;
+    @include mobile {
+      &:hover,
+      &:focus {
+        font-size: 18px;
+        line-height: 1.3;
+        // margin-left: 20px;
+      }
     }
-  }
 
-  @include desktop {
-    margin-right: 18px;
-    margin-left: auto;
+    @include tablet {
+      &:hover,
+      &:focus {
+        font-size: 18px;
+        line-height: 1.3;
+        // margin-left: 20px;
+      }
+    }
 
-    &:hover,
-    &:focus {
-      font-size: 21px;
-      line-height: 1.2;
+    @include desktop {
+      margin-right: 18px;
       margin-left: auto;
+
+      &:hover,
+      &:focus {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-left: auto;
+      }
     }
   }
-}
 
-.form-input__icon {
-  position: absolute;
-  fill: $color-accent;
-  top: 52%;
-  left: 3px;
-  transform: translateY(-50%);
-  
-}
+  .form-input__icon {
+    position: absolute;
+    fill: $color-accent;
+    top: 52%;
+    left: 3px;
+    transform: translateY(-50%);
+  }
 
-.form-input__wrappy {
-  position: relative;
-}
+  .form-input__wrappy {
+    position: relative;
+  }
 
-.form-input__quantity {
-  border-radius: 8px;
-  border: 1px solid $color-accent;
-  color: $color-accent;
-  outline: none;
-  margin-bottom: 10px;
-  padding-left: 3px;
-}
+  .form-input__quantity {
+    border-radius: 8px;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    outline: none;
+    margin-bottom: 10px;
+    padding-left: 3px;
+  }
 
-.form-field__textarea {
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  border: 1px solid $color-accent;
-  color: $color-accent;
-  margin-bottom: 10px;
-  width: 100%;
-  height: 80px;
-  resize: none;
-  outline: none;
-  margin-bottom: 20px;
+  .form-field__textarea {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 80px;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+  }
 
   &::placeholder {
     color: $color-accent;
   }
+
+  .geo-frame {
+    padding-top: 10%;
+  }
+
+  // Franchise
+  .franchise-modal__text {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
 }
- 
-.geo-frame{
-  padding-top: 10%;
-}
-
-// Franchise
-.franchise-modal__text{
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-
-
-
-
