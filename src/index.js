@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let openModals = document.getElementsByClassName('form');
 
-
   for (let button of openModals) {
     button.onclick = function (e) {
       e.preventDefault();
@@ -67,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ----------------------- Slider scripts-------------------------
-
 
 const prev = document.getElementById('btn-prev'),
     next = document.getElementById('btn-next'),
@@ -128,9 +126,8 @@ const nextSlide = () => {
     } else {
         index++;
         prepareCurrentSlide(index);
-        }  
+        }
 }
-
 
 const prevSlide = () => {
     if (index == 0) {
@@ -167,10 +164,8 @@ dots.forEach((item, indexDot) => {
     })
 })
 
-
 next.addEventListener('click', nextSlide);
 prev.addEventListener('click', prevSlide);
-
 
 })();
 
@@ -194,7 +189,6 @@ prev.addEventListener('click', prevSlide);
     refs.body.classList.toggle('no-scroll');
   }
 })();
-
 
 dots.forEach((item, indexDot) => {
     item.addEventListener('click', () => {
