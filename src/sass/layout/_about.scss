@@ -13,17 +13,16 @@
         screen and (min-resolution: 2dppx) {
             background-image: url(./images/mobile-about-milk@2x.png);
         }
-    }
-
+  
     @include desktop {
         background-image: url(./images/desktop-about-milk.png);
+
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
                 background-image: url(./images/desktop-about-milk@2x.png);
             }
-    }
-}
+
 
 .about__containeir {
     margin: 0 auto;
