@@ -1,10 +1,9 @@
 .page-header {
     position: absolute;
-    z-index: 5;
-
+  
     width: 100%;
     padding-top: 4px;
-
+z-index: 5;
     @include tablet {
         padding-top: 32px;
     }
@@ -90,7 +89,7 @@
 
     @include desktop-close {
         overflow-y: scroll;
-        padding: 20px;
+        padding: 20px 20px 80px;
         flex-direction: column;
     }
 
@@ -100,7 +99,10 @@
         flex-direction: row-reverse;
     }
 }
-
+.container-button-menu {
+    display: flex;
+    flex-direction: column;
+}
 .mobile-menu-close {
     margin-left: auto;
     margin-bottom: 24px;
@@ -126,7 +128,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 32px;
+        margin-left: 30px;
         width: 160px;
         height: 44px;
         padding-left: 37.23px;
