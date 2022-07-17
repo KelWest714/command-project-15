@@ -24,11 +24,12 @@
             }
 
 
-.about__containeir {
-    margin: 0 auto;
-    padding-top: 125px;
-    padding-bottom: 40px;
-    width: 100%;
+            .about__containeir {
+                margin: 0 auto;
+                padding-top: 125px;
+                padding-bottom: 40px;
+                width: 100%;
+
 
     @include mobile {
             padding-top: 130px;
