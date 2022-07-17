@@ -31,17 +31,32 @@
         alt="cow"
       />
     </picture>
-    <p class="about__description">
-      Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-      cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo
-      fringilla.
-    </p>
-    <p class="about__text">
-      Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-      Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-      suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-      tincidunt. Aliquam erat volutpat. Aenean accumsan.
-    </p>
-    <button class="about__button" type="button">read more</button>
+    <ul class="about__list list">
+      <li class="about__item">
+        <p class="about__description">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+      </li>
+      <li class="about__item">
+        <p class="about__text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+        </p>
+      </li>
+      <li class="about__item">
+        <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>
+      </li>
+    </ul>
+
+    <button class="about__button" type="button">
+      Read more
+      <svg class="about__icon" width="15" height="15">
+        <use href="./images/sprite.svg#icon-next"></use>
+      </svg>
+    </button>
   </div>
 </section>
