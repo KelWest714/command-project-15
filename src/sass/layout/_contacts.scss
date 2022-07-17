@@ -1,10 +1,5 @@
 .contacts {
-  background-color: var(--color-footer-bg);
-  @include desktop {
-    background-repeat: no-repeat;
-    background-position: 0px 102px, 0px 0px;
-    background-size: contain;
-  }
+  background: linear-gradient(#fff 10%, #fff5f6 5%);
 }
 
 .contacts__container {
@@ -16,26 +11,24 @@
 
 .contacts__list-items {
   display: flex;
-  flex-wrap: wrap;
-  margin: -15px -15px 0;
-  margin-bottom: 60px;
-  list-style: none;
+  flex-wrap: nowrap;
 
   @include mobile {
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 54px;
   }
 
   @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: -10px -10px 81px;
   }
 
   @include desktop {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
+    flex-wrap: nowrap;
+    margin: -15px -15px 86px;
   }
 }
 
@@ -53,7 +46,6 @@
   }
 
   @include desktop {
-    margin: 15px;
     padding: 51px 43px;
     flex-basis: calc(33.33333% - 20px);
   }
@@ -165,8 +157,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
- 
 }
 
 .contacts__btn {
@@ -191,18 +181,20 @@
 
 .btn {
   padding-right: 37px;
-  padding-left: 37px;
+  padding-left: 30px;
   border-radius: 22px;
   border: none;
-
   font-family: 'DMSans', sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.28;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   fill: currentColor;
-  transition: get-transition-prop(background-color), get-transition-prop(fill);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts__btn--secondary {

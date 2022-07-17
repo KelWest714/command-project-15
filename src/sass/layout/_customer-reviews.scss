@@ -25,6 +25,7 @@
     background: #FAFAFA;
     padding: 43px 50px 17px 50px;
 
+
     @media screen and (min-width: 768px) {
         padding: 37px 6px 36px 6px;
     }
@@ -32,6 +33,7 @@
     @media screen and (min-width: 1200px) {
         padding: 31px 74px;
     }
+
 }
 
 .rc__bottom-border {
@@ -47,6 +49,7 @@
     text-align: center;
     color: #000000;
     margin: 0 8px 0 15px;
+
 
     @media screen and (min-width: 768px) {
         margin: 0 45px 0 49px;
@@ -86,6 +89,7 @@
         line-height: 194%;
 
     }
+
 }
 
 .rc__dots_block {
@@ -144,6 +148,7 @@
     width: 50px;
     top: 0;
     font-size: xx-large;
+
     display: flex;
     justify-content: space-around;
 }
@@ -191,7 +196,9 @@
     margin-right: 0;
 }
 
+
 .active_dot {
+
     background-color: white
 }
 
@@ -200,6 +207,7 @@
     height: 100%;
     margin-bottom: 3px;
 }
+
 
 .active {
     display: block;
@@ -213,6 +221,7 @@
 
 .active_dot {
     .dot__current {
+
         display: block;
     }
 }
@@ -226,5 +235,4 @@
     left: 49%;
     color: #C7133E;
     position: absolute;
-
 }
