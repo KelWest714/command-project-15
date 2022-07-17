@@ -2,15 +2,7 @@
     margin: 60px 0;
 }
 
-.rc__title {
-    display: none;
-}
-
-.slide {
-    display: none;
-}
-
-.feedback {
+.rc__title, .slide, .feedback{
     display: none;
 }
 
@@ -21,19 +13,17 @@
 }
 
 .rc__text-thumb {
+    position: relative;
     background: #FAFAFA;
     padding: 43px 50px 17px 50px;
-
 
     @media screen and (min-width: 768px) {
         padding: 37px 6px 36px 6px;
     }
 
-    // @media screen and (min-width: 1200px) {
-    //     margin: 0 34px 0 36px;
-    //     font-size: 16px;
-    //     line-height: 186%;
-    // }
+    @media screen and (min-width: 1200px) {
+        padding: 31px 74px;
+    }
 
 }
 
@@ -46,27 +36,44 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 258%;
+    line-height: 260%;
     text-align: center;
     color: #000000;
     margin: 0 8px 0 15px;
-
-
     @media screen and (min-width: 768px) {
         margin: 0 45px 0 49px;
-
         font-size: 14px;
-        line-height: 221%;
+        line-height: 222%;
         letter-spacing: 0.04em;
     }
-
     @media screen and (min-width: 1200px) {
         margin: 0 34px 0 36px;
         font-size: 16px;
-        line-height: 193%;
+        line-height: 195%;
 
     }
+}
 
+.rc__text-thumb::before {
+    content: '';
+    background-image: url(../images/customers/CRLapky.png);
+    width: 54px;
+    height: 40px;
+    display: block;
+    background-size: contain;
+    position: absolute;
+    top: 30px;
+    left: 53px;
+    z-index: 5;
+    @media screen and (min-width: 768px) {
+        top: 20px;
+        left: 6px;
+    }
+    @media screen and (min-width: 1200px) {
+        top: 32px;
+        left: 72px;
+        line-height: 194%;
+    }
 }
 
 .rc__dots_block {
@@ -75,73 +82,63 @@
     justify-content: center;
 }
 
-.dots {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: #C7133E;
-    margin: 16px 0;
-
-}
-
-.dots:not(last-child) {
-    margin-right: 10px;
-}
-
-.dots:last-child {
-    margin-right: 0;
-}
-
-
-
-.rc__dot_block {
-
-    display: flex;
-    justify-content: center;
+.rc__slider {
+    position: relative;
 }
 
 .rc-subtitle {
     text-align: center;
+    margin: 36px 0 32px 0;
+    position: relative;
     margin-bottom: 32px;
+    padding-top: 36px;
 }
 
-.wrapper {
-    position: relative;
+// .rc-subtitle::before {
+//     content: '';
+//     background-image: url(../images/customers/dots.png);
+//     width: 32px;
+//     height: 4px;
+//     background-size: contain;
+//     @media screen and (min-width: 768px) {
+//         left: 48%;
+//     }
+// }
 
+#btn-next,
+#btn-prev {
+    position: absolute;
+    display: inline-block;
+    padding: 9px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #fff5f6 inset, 0 0 0 0 #fff5f6;
+    font-weight: bold;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+    opacity: 0.4;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-around;
+}
+
+#btn-next:hover,
+#btn-prev:hover {
+    box-shadow: 0 0 10px 0 #d41443 inset, 0 0 10px 4px #fff5f6;
+    color: black;
 }
 
 #btn-prev {
-    position: absolute;
     left: 0;
-    top: 0;
-    height: 50px;
-    width: 50px;
-    background-color: #C7133E;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: opasity .2s ease-in-out;
 }
 
 #btn-next {
-    position: absolute;
-    left: auto;
     right: 0;
-    top: 0;
-    height: 50px;
-    width: 50px;
-    background-color: #C7133E;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: opasity .2s ease-in-out;
 }
 
-
-
-
-// #btn-next{
-//     left: auto;
-//     right: 0;
-// }
 .button-block {
     width: 100%;
     height: 50px;
@@ -152,7 +149,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-
+    cursor: pointer;
 }
 
 .dot:not(last-child) {
@@ -163,9 +160,7 @@
     margin-right: 0;
 }
 
-
 .active_dot {
-
     background-color: white
 }
 
@@ -174,7 +169,6 @@
     height: 100%;
     margin-bottom: 3px;
 }
-
 
 .active {
     display: block;
@@ -188,32 +182,17 @@
 
 .active_dot {
     .dot__current {
-
         display: block;
     }
 }
 
-
-.rc__text-thumb::after {
-
+.rc-subtitle::before {
     content: '';
-    width: 5px;
-    height: 5px;
-    background-color: #C7133E;
-
-    //   @media screen and (min-width: 320px) {
-    //       width: 320px;
-    //   }
-
-    //   @media screen and (min-width: 768px) {
-    //       width: 768px;
-    //       padding-left: 32px;
-    //       padding-right: 32px;
-    //   }
-
-    //   @media screen and (min-width: 1200px) {
-    //       width: 1200px;
-    //       padding-left: 16px;
-    //       padding-right: 16px;
-    //   }
+    background-image: url(../images/customers/CRDots.png);
+    width: 32px;
+    height: 4px;
+    top: 16px;
+    left: 49%;
+    color: #C7133E;
+    position: absolute;
 }

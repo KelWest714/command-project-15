@@ -64,9 +64,9 @@
   fill: currentColor;
 }
 
-// .no-scroll {
-//   overflow: hidden;
-// }
+.no-scroll {
+  overflow: hidden;
+}
 
 // Buy now modal form-------------------------------------
 .modal,
@@ -124,13 +124,13 @@
   left: 0;
   z-index: 1000;
   opacity: 1;
-  z-index: 999;
-  pointer-events: auto;
+  // pointer-events: auto;
 
   &.is-hidden {
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -150,9 +150,9 @@
 
   // &:hover,
   // &:focus {
-    box-shadow: 0 0 30px $color-accent;
-    box-shadow: 0 0 20px $color-main-bg;
-    fill: $icon-color;
+  box-shadow: 0 0 30px $color-accent;
+  box-shadow: 0 0 20px $color-main-bg;
+  fill: $icon-color;
   // }
 }
 
@@ -236,7 +236,6 @@
   }
 
   @include mobile {
-
     &:hover,
     &:focus {
       font-size: 18px;
@@ -246,7 +245,6 @@
   }
 
   @include tablet {
-
     &:hover,
     &:focus {
       font-size: 18px;
