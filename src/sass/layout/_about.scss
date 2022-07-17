@@ -1,27 +1,27 @@
 .about {
   background-color: $color-footer-bg;
   text-align: center;
-  background-image: url(./images/mobile-about-milk.png);
+  background-image: url(../images/mobile-about-milk.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 80%;
 
   @include mobile {
-    background-image: url(./images/mobile-about-milk.png);
+    background-image: url(../images/mobile-about-milk.png);
     @media screen and (min-device-pixels-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(./images/mobile-about-milk@2x.png);
+      background-image: url(../images/mobile-about-milk@2x.png);
     }
   }
 
   @include desktop {
-    background-image: url(./images/desktop-about-milk.png);
+    background-image: url(../images/desktop-about-milk.png);
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(./images/desktop-about-milk@2x.png);
+      background-image: url(../images/desktop-about-milk@2x.png);
     }
   }
 }
