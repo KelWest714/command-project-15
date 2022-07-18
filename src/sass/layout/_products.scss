@@ -8,7 +8,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(18px, 400, 1.17, null);
+  @include font(400, 18, 21, null);
 
   text-align: center;
   text-transform: uppercase;
@@ -18,13 +18,13 @@
   @include tablet {
     margin-bottom: 18px;
 
-    @include font(26px, null, 1.15, null);
+    @include font(null, 26, 30, null);
   }
 
   @include desktop {
     margin-bottom: 16px;
 
-    @include font(30px, null, 1.13, null);
+    @include font(null, 30, 34, null);
   }
 }
 
@@ -33,7 +33,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(34px, 400, 1.15, 0.04em);
+  @include font(400, 34, 39, 0.04em);
 
   text-align: center;
   text-transform: uppercase;
@@ -43,13 +43,13 @@
   @include tablet {
     margin-bottom: 158px;
 
-    @include font(48px, null, null, null);
+    @include font(null, 48, 55, null);
   }
 
   @include desktop {
     margin-bottom: 281px;
 
-    @include font(58px, null, 1.14, 0.06em);
+    @include font(null, 58, 66, 0.06em);
   }
 }
 
@@ -250,7 +250,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(20px, 400, 1.15, 0.04em);
+  @include font(400, 20, 23, 0.04em);
 
   text-align: center;
 
@@ -267,7 +267,7 @@
   }
 
   @include desktop {
-    @include font(30px, null, 1.13, null);
+    @include font(null, 30, 34, null);
   }
 }
 
@@ -276,7 +276,7 @@
 
   max-width: 200px;
 
-  @include font(14px, 700, 1.52, 0.04em);
+  @include font(700, 14, 22, 0.04em);
 
   text-align: center;
 
@@ -285,7 +285,7 @@
   @include tablet {
     max-width: 160px;
 
-    @include font(null, null, 1.76, null);
+    @include font(null, 14, 25, null);
   }
 
   @include desktop {
@@ -293,7 +293,7 @@
 
     max-width: 241px;
 
-    @include font(16px, null, null, null);
+    @include font(null, 16, 28, null);
   }
 }
 
