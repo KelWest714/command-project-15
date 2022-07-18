@@ -56,7 +56,10 @@
 .card__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+
+  @include tablet {
+    gap: 16px;
+  }
 
   @include desktop {
     gap: 32px;
@@ -78,13 +81,14 @@
   }
 
   @include tablet {
+    width: calc((100% - 32px) / 3);
     padding-top: 126px;
     padding-bottom: 32px;
 
-    width: calc((100% - 64px) / 3);
   }
 
   @include desktop {
+    width: calc((100% - 64px) / 3);
     padding-top: 165px;
     padding-bottom: 60px;
   }
@@ -305,8 +309,6 @@
   background-color: var(--color-white);
   border: none;
   border-radius: 50%;
-  text-align: center;
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -315,6 +317,7 @@
   &:focus {
     background-color: var(--color-button-hover);
   }
+
   &:active {
     box-shadow: inset 0px 3px 1px rgba(0, 0, 0, 0.1),
       0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -344,11 +347,11 @@
   transform: translate(-50%, -50%);
   transition: all 800ms ease 0ms;
   z-index: 1;
-  width: 100vw;
-  height: 525px;
+  width: 100%;
+  height: auto;
   padding: 40px;
   border-radius: 24px;
-  overflow-y: scroll;
+  overflow: hidden;
 
   @include mobile {
     width: 320px;
@@ -394,7 +397,7 @@
   }
 }
 
-.button-buy {
+.button-buy__modal {
   display: flex;
   align-items: center;
   justify-content: space-between;
