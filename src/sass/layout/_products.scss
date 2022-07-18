@@ -8,7 +8,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(400, 18, 21, null);
+  @include font(18px, 400, 1.17, null);
 
   text-align: center;
   text-transform: uppercase;
@@ -18,13 +18,13 @@
   @include tablet {
     margin-bottom: 18px;
 
-    @include font(null, 26, 30, null);
+    @include font(26px, null, 1.15, null);
   }
 
   @include desktop {
     margin-bottom: 16px;
 
-    @include font(null, 30, 34, null);
+    @include font(30px, null, 1.13, null);
   }
 }
 
@@ -33,7 +33,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(400, 34, 39, 0.04em);
+  @include font(34px, 400, 1.15, 0.04em);
 
   text-align: center;
   text-transform: uppercase;
@@ -43,13 +43,13 @@
   @include tablet {
     margin-bottom: 158px;
 
-    @include font(null, 48, 55, null);
+    @include font(48px, null, null, null);
   }
 
   @include desktop {
     margin-bottom: 281px;
 
-    @include font(null, 58, 66, 0.06em);
+    @include font(58px, null, 1.14, 0.06em);
   }
 }
 
@@ -64,10 +64,6 @@
 }
 
 .card__item {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
   padding-top: 160px;
   padding-bottom: 40px;
 
@@ -238,7 +234,8 @@
   }
 }
 
-.card-list__container {
+.card-list__container,
+.card__modal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,7 +247,7 @@
 
   font-family: Titan One, cursive;
 
-  @include font(400, 20, 23, 0.04em);
+  @include font(20px, 400, 1.15, 0.04em);
 
   text-align: center;
 
@@ -267,7 +264,7 @@
   }
 
   @include desktop {
-    @include font(null, 30, 34, null);
+    @include font(30px, null, 1.13, null);
   }
 }
 
@@ -276,7 +273,7 @@
 
   max-width: 200px;
 
-  @include font(700, 14, 22, 0.04em);
+  @include font(14px, 700, 1.52, 0.04em);
 
   text-align: center;
 
@@ -285,7 +282,7 @@
   @include tablet {
     max-width: 160px;
 
-    @include font(null, 14, 25, null);
+    @include font(null, null, 1.76, null);
   }
 
   @include desktop {
@@ -293,7 +290,7 @@
 
     max-width: 241px;
 
-    @include font(null, 16, 28, null);
+    @include font(16px, null, null, null);
   }
 }
 
@@ -324,6 +321,158 @@
   }
 }
 
-.card__icon {
+.card__icon-open,
+.card__icon-close {
   fill: var(--color-accent);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms, visibility 250ms;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(212, 123, 145, 0.5);
+}
+
+.card__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 800ms ease 0ms;
+  z-index: 1;
+  width: 100vw;
+  height: 525px;
+  padding: 40px;
+  border-radius: 24px;
+  overflow-y: scroll;
+
+  @include mobile {
+    width: 320px;
+  }
+
+  &.card-pink {
+    background-color: var(--color-main-bg);
+    background-image: url(../images/pic-1-tab.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 95%;
+    background-size: auto;
+
+    @include retina {
+      background-image: url('../images/pic-1-tab@2x.png');
+    }
+  }
+
+  &.card-coffee {
+    background-color: var(--color-card-coffee);
+    background-image: url(../images/pic-2-tab.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 95%;
+    background-size: auto;
+
+    @include retina {
+      background-image: url('../images/pic-2-tab@2x.png');
+    }
+  }
+
+  &.card-green {
+    background-color: var(--color-card-green);
+    background-image: url(../images/pic-3-tab.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 95%;
+    background-size: auto;
+
+    @include retina {
+      background-image: url('../images/pic-3-mob@2x.png');
+    }
+  }
+}
+
+.button-buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+  width: 209px;
+  height: 44px;
+  padding-left: 48.64px;
+  padding-right: 48.64px;
+  background-color: $color-white;
+  border: none;
+  border-radius: 22px;
+  font-family: DM Sans, serif;
+  @include font(16px, 700, 1.31, null);
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-hover;
+  }
+
+  @include tablet {
+    width: 186px;
+    padding-left: 43.28px;
+    padding-right: 43.28px;
+  }
+
+  @include desktop {
+    width: 159px;
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+}
+
+.button-buy__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 90.7px;
+  color: $color-accent;
+
+  @include tablet {
+    width: 80.72px;
+  }
+
+  @include desktop {
+    width: 69px;
+  }
+}
+
+.button-buy__icon {
+  fill: $color-accent;
+
+  @include tablet {
+    width: 18px;
+  }
+
+  @include desktop {
+    width: 16px;
+  }
+}
+
+.card-list__text {
+  margin-bottom: 32px;
+
+  @include font(14px, 700, 1.52, 0.04em);
+
+  text-align: center;
+
+  color: var(--color-white);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

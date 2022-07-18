@@ -1,4 +1,4 @@
-<section class="products__section" id="products">
+<section class="products__section">
         <div class="container">
             <p class="products__label">100% natural</p>
             <h2 class="products__title">products</h2>
@@ -6,14 +6,14 @@
                 <li class="card__item card--pink">
                     <div class="card-list__container">
                     <h3 class="card__title">ice cream</h3>
-                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
-                    aliqua facilisis.</p>
-                    <button type="button" class="card__btn">
-                        <svg class="card__icon" width="40" height="40">
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et. dolore magna
+                        aliqua facilisis.</p>
+                    <button type="button" class="card__btn btn-open" data-modal-pink-open>
+                        <svg class="card__icon-open" width="40" height="40">
                             <use href="./images/sprite.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
-                    <p class="card-list__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est laborum sed, magni consectetur reprehenderit architecto pariatur velit aliquid fuga accusantium. Ea corporis ducimus aperiam pariatur odit, nesciunt quo. Fugiat dolorum eaque repellendus quod accusamus distinctio suscipit laboriosam voluptate aliquam ipsum!</p>
                     </div>
                 </li>
                 <li class="card__item card--coffee">
@@ -21,8 +21,8 @@
                     <h3 class="card__title">ice coffee</h3>
                     <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
                     aliqua facilisis.</p>
-                    <button type="button" class="card__btn">
-                        <svg class="card__icon" width="40" height="40">
+                    <button type="button" class="card__btn btn-open" data-modal-coffee-open>
+                        <svg class="card__icon-open" width="40" height="40">
                             <use href="./images/sprite.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
@@ -33,8 +33,8 @@
                     <h3 class="card__title">milkshakes</h3>
                     <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
                     aliqua facilisis.</p>
-                    <button type="button" class="card__btn">
-                        <svg class="card__icon" width="40" height="40">
+                    <button type="button" class="card__btn btn-open" data-modal-green-open>
+                        <svg class="card__icon-open" width="40" height="40">
                             <use href="./images/sprite.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
@@ -42,6 +42,67 @@
                 </li>
             </ul>
         </div>
+
+        <div class="backdrop is-hidden" data-modal-pink="">
+        <div class="card__modal card-pink">
+            <button class="button-buy" type="button">
+                <span class="button-buy__text">Buy now</span>
+                <svg class="button-buy__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-next"></use>
+                </svg>
+            </button>
+            <p class="card-list__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum delectus quas incidunt vero molestias magnam. Ipsam dolore placeat, ipsum accusantium soluta quia error illo. Quo aliquid nemo fugit id cupiditate blanditiis laboriosam, veniam maiores sit, ea officiis praesentium. Sapiente perspiciatis dicta, eos nihil, sequi nemo nesciunt blanditiis itaque hic suscipit eius culpa modi soluta necessitatibus consequuntur iste quibusdam porro nisi.</p>
+            <button type="button" class="card__btn btn-close" data-modal-pink-close>
+                <svg class="card__icon-close" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+            </button>
+        </div>
+        </div>
+
+<div class="backdrop is-hidden" data-modal-coffee>
+        <div class="card__modal card-coffee">
+            <button class="button-buy" type="button">
+                <span class="button-buy__text">Buy now</span>
+                <svg class="button-buy__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-next"></use>
+                </svg>
+            </button>
+            <p class="card-list__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum delectus quas incidunt vero
+                molestias magnam. Ipsam dolore placeat, ipsum accusantium soluta quia error illo. Quo aliquid nemo fugit id
+                cupiditate blanditiis laboriosam, veniam maiores sit, ea officiis praesentium. Sapiente perspiciatis dicta, eos
+                nihil, sequi nemo nesciunt blanditiis itaque hic suscipit eius culpa modi soluta necessitatibus consequuntur
+                iste quibusdam porro nisi.</p>
+            <button type="button" class="card__btn btn-close" data-modal-coffee-close>
+                <svg class="card__icon-close" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+            </button>
+        </div>
+        </div>
+
+<div class="backdrop is-hidden" data-modal-green>
+        <div class="card__modal card-green">
+            <button class="button-buy" type="button">
+                <span class="button-buy__text">Buy now</span>
+                <svg class="button-buy__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-next"></use>
+                </svg>
+            </button>
+            <p class="card-list__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum delectus quas incidunt vero
+                molestias magnam. Ipsam dolore placeat, ipsum accusantium soluta quia error illo. Quo aliquid nemo fugit id
+                cupiditate blanditiis laboriosam, veniam maiores sit, ea officiis praesentium. Sapiente perspiciatis dicta, eos
+                nihil, sequi nemo nesciunt blanditiis itaque hic suscipit eius culpa modi soluta necessitatibus consequuntur
+                iste quibusdam porro nisi.</p>
+            <button type="button" class="card__btn btn-close" data-modal-green-close>
+                <svg class="card__icon-close" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
+            </button>
+        </div>
+        </div>
     </section>
 </main>
+
+<script src="./js/modal-card.js"></script>
 </body>
