@@ -12,6 +12,7 @@
   --color-button-hover: #ECEBEB;
   --icon-color: #fea5bb;
   --backdrop-color: rgba(75, 41, 49, 0.774);
+  --modal-duration: 5s;
 }
 
 //  SASS Vars
@@ -27,5 +28,6 @@ $color-second-text: #907E82;
 $color-button-hover: #ECEBEB;
 $icon-color: #fea5bb;
 $backdrop-color: rgba(75, 41, 49, 0.774);
+$modal-duration: 5s;
 
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
