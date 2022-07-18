@@ -42,7 +42,7 @@
   top: 50%;
   left: 50%;
   width: 600px;
-  height: 100vh;
+  height: 90vh;
   transform: translate(-50%, -50%) scale(1);
   transition-duration: 250ms;
   transition-timing-function: $timing-function;
@@ -54,8 +54,6 @@
   margin-left: auto;
   margin-right: auto;
   padding: 10px 40px;
-  margin-top: 2%;
-  margin-bottom: 2%;
   border-radius: 8px;
 
   z-index: 9999;
@@ -121,6 +119,7 @@
   justify-content: center;
   cursor: pointer;
   transition: box-shadow fill 250ms $timing-function;
+  margin-bottom: 20px;
 
   &:hover,
   &:focus {
@@ -195,7 +194,8 @@
   outline: none;
   overflow: hidden;
   position: absolute;
-  bottom: 30px;
+
+  bottom: 50px;
   left: 50%;
   color: #FFF;
   font-size: 18px;
@@ -302,4 +302,8 @@
   margin-top: 30px;
   margin-bottom: 50px;
   color: $color-footer-bg;
+}
+
+.hidden {
+  overflow: hidden;
 }
