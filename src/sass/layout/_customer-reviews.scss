@@ -40,6 +40,8 @@
     text-align: center;
     color: #000000;
     margin: 0 8px 0 15px;
+    position: relative;
+    z-index: 2;
     @media screen and (min-width: 768px) {
         margin: 0 45px 0 49px;
         font-size: 14px;
@@ -54,7 +56,7 @@
     }
 }
 
-.rc__text-thumb::before {
+.rc__text::before {
     content: '';
     background-image: url(../images/customers/CRLapky.png);
     width: 54px;
@@ -62,16 +64,16 @@
     display: block;
     background-size: contain;
     position: absolute;
-    top: 30px;
-    left: 53px;
-    z-index: 5;
+    top: -20px;
+    left: 0px;
+    z-index: -1;
     @media screen and (min-width: 768px) {
-        top: 20px;
-        left: 6px;
+        top: 0;
+        left: -30px;
     }
     @media screen and (min-width: 1200px) {
-        top: 32px;
-        left: 72px;
+        top: 0;
+        left: -40px;
         line-height: 194%;
     }
 }
@@ -119,10 +121,14 @@
     opacity: 0.4;
     height: 50px;
     width: 50px;
-    top: 0;
+    top: 522px;
     font-size: xx-large;
     display: flex;
     justify-content: space-around;
+    z-index: 2;
+        @media screen and (min-width: 768px) {
+                top: 333px;
+            }
 }
 
 #btn-next:hover,
@@ -151,6 +157,10 @@
     border-radius: 50%;
     cursor: pointer;
 }
+.dot:hover{
+    background-color: #d41443;
+    box-shadow: 0 0 6px 2px #d41443, 0 0 #d41443;
+}
 
 .dot:not(last-child) {
     margin-right: 18px;
@@ -160,8 +170,13 @@
     margin-right: 0;
 }
 
+
 .active_dot {
-    background-color: white
+    background-color: white;
+}
+.active_dot:hover{
+    background-color: white ;
+    box-shadow: none
 }
 
 .dot__current {
@@ -192,7 +207,13 @@
     width: 32px;
     height: 4px;
     top: 16px;
-    left: 49%;
+    left: 124px;
     color: #C7133E;
     position: absolute;
+    @media screen and (min-width: 768px) {
+        left: 294px;
+    }
+    @media screen and (min-width: 1200px) {
+        left: 468px;
+    }
 }
