@@ -17,12 +17,12 @@
 .advantages__list {
     @include tablet {
         display: flex;
-        margin-right: 180px;
     }
+        margin: -8px;
 }
 
 .advantages__item {
-    // padding: 8px;
+    padding: 8px;
 
     &:not(:last-child) {
         margin-bottom: 32px;
@@ -30,13 +30,13 @@
 
     @include tablet {
         &:not(:last-child) {
-            margin-right: 30px;
+            margin-right: 52px;
             margin-bottom: 0;
         }
     }
 
     @include desktop {
-       margin-right: 132px;
+       margin-right: 32px;
     }
 
     &::before {
@@ -65,6 +65,15 @@
 
     &:nth-child(3)::before {
         background-image: url(../images/adv-heart.png);
+    }
+
+    border-radius: 24px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover {
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     }
 
 }
