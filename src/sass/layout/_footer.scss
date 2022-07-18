@@ -55,6 +55,8 @@
   margin-bottom: 40px;
 
   @include tablet {
+    width: 340px;
+
     font-size: 48px;
     margin-bottom: 0;
   }
@@ -163,5 +165,11 @@
 
   &:hover {
     transform: translateY(-15px) scale(1.2);
+  }
+}
+
+br {
+  @include desktop {
+    display: none;
   }
 }
