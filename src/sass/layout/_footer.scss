@@ -153,3 +153,15 @@
     width: auto;
   }
 }
+
+.jump {
+  display: inline-block;
+
+  cursor: pointer;
+
+  transition: transform 100ms ease-in;
+
+  &:hover {
+    transform: translateY(-15px) scale(1.2);
+  }
+}
