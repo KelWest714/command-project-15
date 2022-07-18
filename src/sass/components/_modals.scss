@@ -1,40 +1,3 @@
-// .modal-close-geo {
-//   position: absolute;
-//   top: 20px;
-//   right: 20px;
-
-//   width: 32px;
-//   height: 32px;
-//   display: block;
-//   border-radius: 50%;
-//   background-color: transparent;
-//   border: 1px solid $color-second-bg;
-//   color: $color-second-bg;
-
-//   margin-left: auto;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   transition: all 250ms ease-in;
-
-//   &:hover,
-//   &:focus {
-//     border-color: $color-accent;
-//     color: $color-accent;
-//   }
-// }
-
-// .modal-close__icon {
-//   fill: currentColor;
-// }
-
-// .no-scroll {
-//   overflow: hidden;
-// }
-
-// Buy now modal form-------------------------------------
 .modal,
 .modal-geo,
 .franchise-modal {
@@ -55,9 +18,7 @@
   margin-right: auto;
   padding: 10px 40px;
   border-radius: 8px;
-
   z-index: 9999;
-
   opacity: 0.7;
   background-color: #bb9ca3;
 
@@ -65,6 +26,9 @@
     width: 400px;
   }
 }
+
+
+
 
 .modal-form {
   display: flex;
@@ -88,10 +52,6 @@
   width: 100%;
   height: 100%;
   background-color: $backdrop-color;
-
-
-
-
   top: 0;
   left: 0;
   z-index: 1000;
@@ -128,6 +88,7 @@
     fill: $icon-color;
   }
 }
+
 
 .form-field {
   display: flex;
@@ -194,8 +155,7 @@
   outline: none;
   overflow: hidden;
   position: absolute;
-
-  bottom: 50px;
+  margin-top: 30px;
   left: 50%;
   color: #FFF;
   font-size: 18px;
@@ -225,7 +185,7 @@
     &:focus {
       font-size: 18px;
       line-height: 1.3;
-      // margin-left: 20px;
+
     }
   }
 
@@ -250,6 +210,10 @@
       margin-left: auto;
     }
   }
+}
+
+.submit-button.franchise {
+  bottom: 10%;
 }
 
 .form-input__icon {
