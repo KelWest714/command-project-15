@@ -139,6 +139,12 @@
 
 #btn-prev {
     left: 0;
+    top: 527px;
+    transform: rotate(180deg);
+        @media screen and (min-width: 768px) {
+            top: 338px;
+        }
+    
 }
 
 #btn-next {
