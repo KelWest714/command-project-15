@@ -362,7 +362,7 @@
 
   &.card-pink {
     background-color: var(--color-main-bg);
-    background-image: url(../images/pic-1-tab.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/pic-1-tab.png);
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: 95%;
@@ -375,7 +375,7 @@
 
   &.card-coffee {
     background-color: var(--color-card-coffee);
-    background-image: url(../images/pic-2-tab.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/pic-2-tab.png);
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: 95%;
@@ -388,7 +388,7 @@
 
   &.card-green {
     background-color: var(--color-card-green);
-    background-image: url(../images/pic-3-tab.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/pic-3-tab.png);
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: 95%;
