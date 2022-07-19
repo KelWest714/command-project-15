@@ -142,17 +142,31 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
+
+  transition: all 350ms ease;
+
+  &:hover {
+    background-color: $color-accent;
+    box-shadow: 0 0 6px 2px $color-accent, 0 0 $color-accent;
+    opacity: 1;
+  }
 }
 
 .swiper-pagination-bullet-active {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 0%;
   background: transparent;
   background-image: url(../images/customers/frame.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &:hover {
+    background-color: white;
+    opacity: 1;
+    box-shadow: none;
+  }
 }
 
 .swiper-button-next {
