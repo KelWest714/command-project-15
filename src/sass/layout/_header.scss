@@ -41,6 +41,13 @@ z-index: 5;
         margin-left: auto;
         border: none;
         background-color: transparent;
+        opacity: 1;
+       
+            transition: opacity 250ms linear;
+        
+            &.opacity {
+                opacity: 0;
+            }
     }
 
     @include desktop {
@@ -50,6 +57,10 @@ z-index: 5;
 
 .mobile-menu-open__icon {
     fill: $color-accent;
+    transition: fill 250ms linear;
+    .mobile-menu-open.opacity & {
+        fill: $color-main-bg;
+    }
 }
 
 .menu {
@@ -138,7 +149,6 @@ z-index: 5;
         border-radius: 22px;
         @include font(700, 16px, 21px, null);
         transition: background-color 250ms linear;
-
         &:hover,
         &:focus {
             background-color: $color-button-hover;
