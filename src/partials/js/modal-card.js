@@ -1,50 +1,38 @@
 (() => {
-  const refs = {
-    openMenuBtn: document.querySelector('[data-modal-pink-open]'),
-    closeMenuBtn: document.querySelector('[data-modal-pink-close]'),
-    menu: document.querySelector('[data-modal-pink]'),
+  const cards = {
+    openPinkBtn: document.querySelector('[data-modal-pink-open]'),
+    closePinkBtn: document.querySelector('[data-modal-pink-close]'),
+    openCoffeeBtn: document.querySelector('[data-modal-coffee-open]'),
+    closeCoffeeBtn: document.querySelector('[data-modal-coffee-close]'),
+    openGreenBtn: document.querySelector('[data-modal-green-open]'),
+    closeGreenBtn: document.querySelector('[data-modal-green-close]'),
+    pink: document.querySelector('[data-modal-pink]'),
+    coffee: document.querySelector('[data-modal-coffee]'),
+    green: document.querySelector('[data-modal-green]'),
     body: document.querySelector('body'),
   };
 
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  cards.openPinkBtn.addEventListener('click', togglePink);
+  cards.closePinkBtn.addEventListener('click', togglePink);
 
-  function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+  cards.openCoffeeBtn.addEventListener('click', toggleCoffee);
+  cards.closeCoffeeBtn.addEventListener('click', toggleCoffee);
+
+  cards.openGreenBtn.addEventListener('click', toggleGreen);
+  cards.closeGreenBtn.addEventListener('click', toggleGreen);
+
+  function togglePink() {
+    cards.pink.classList.toggle('is-hidden');
+    cards.body.classList.toggle('no-scroll');
   }
-})();
 
-(() => {
-  const refs = {
-    openMenuBtn: document.querySelector('[data-modal-coffee-open]'),
-    closeMenuBtn: document.querySelector('[data-modal-coffee-close]'),
-    menu: document.querySelector('[data-modal-coffee]'),
-    body: document.querySelector('body'),
-  };
-
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
-
-  function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+  function toggleCoffee() {
+    cards.coffee.classList.toggle('is-hidden');
+    cards.body.classList.toggle('no-scroll');
   }
-})();
 
-(() => {
-  const refs = {
-    openMenuBtn: document.querySelector('[data-modal-green-open]'),
-    closeMenuBtn: document.querySelector('[data-modal-green-close]'),
-    menu: document.querySelector('[data-modal-green]'),
-    body: document.querySelector('body'),
-  };
-
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
-
-  function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
-    refs.body.classList.toggle('no-scroll');
+  function toggleGreen() {
+    cards.green.classList.toggle('is-hidden');
+    cards.body.classList.toggle('no-scroll');
   }
 })();
