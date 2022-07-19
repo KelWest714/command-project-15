@@ -2,13 +2,13 @@
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
     openGeoBtn: document.querySelector('[data-geo-open]'),
-    openFranchBtn: document.querySelector('[modal-franchise-open]'),
+    openFranchBtn: document.querySelector('.franchise-open'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     closeGeoBtn: document.querySelector('[data-geo-close]'),
-    closeFranchBtn: document.querySelector('[modal-franchise-close]'),
+    closeFranchBtn: document.querySelector('.franchise-close'),
     modal: document.querySelector('[data-modal]'),
-    geo: document.querySelector('[geo-modal]'),
-    franch: document.querySelector('[franchise-modal]'),
+    geo: document.querySelector('.geo-modal'),
+    franch: document.querySelector('.backdrop-franchise'),
     body: document.querySelector('body'),
   };
 
