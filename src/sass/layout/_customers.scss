@@ -1,0 +1,181 @@
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.customers__photo {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+
+  width: 85px;
+  height: 85px;
+
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.review__thumb {
+  background-color: #fafafa;
+  margin: 0 auto;
+
+  padding: 43px 50px 17px 50px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    width: 620px;
+
+    padding: 37px 55px 44px 55px;
+
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: 968px;
+
+    padding: 32px 72px 32px 72px;
+  }
+}
+
+.customers__rewiev {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  color: $color-main-text;
+
+  &::before {
+    content: '';
+    background-image: url(../images/customers/CRLapky.png);
+    width: 54px;
+    height: 40px;
+    display: block;
+    background-size: contain;
+    position: absolute;
+    top: -10px;
+    left: -45px;
+
+    @include tablet {
+      left: -50px;
+    }
+
+    @include desktop {
+      left: -40px;
+    }
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    width: 750px;
+    font-size: 16px;
+  }
+
+  background: repeating-linear-gradient(
+    #fafafa,
+    #fafafa 30px,
+    #e1e1e1 20px,
+    #e1e1e1 31px
+  );
+}
+
+.customers__thumb {
+  position: relative;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 44px;
+  }
+
+  &::before {
+    content: '. . .';
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    display: inline-block;
+    color: $color-accent;
+
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+}
+
+.customers__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  color: $color-main-text;
+
+  text-align: center;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  border-radius: 0%;
+  background: transparent;
+  background-image: url(../images/customers/frame.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+  right: 1px;
+  opacity: 0.3;
+
+  transition: all 250ms ease;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: #c7133e;
+  }
+}
+.swiper-button-prev {
+  left: 1px;
+  opacity: 0.3;
+
+  transition: all 250ms ease;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: #c7133e;
+  }
+}
