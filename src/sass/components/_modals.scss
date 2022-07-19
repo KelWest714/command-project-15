@@ -1,6 +1,7 @@
 .modal,
 .modal-geo,
-.franchise-modal {
+.modal-franchise,
+.modal-about {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,7 +30,19 @@
   }
 }
 
+.modal-about__frame{
+  margin-top: 30px;
+  border: 10px;
+  border-radius: 8px;
+  border-color: green;
+}
 
+.modal-about__text{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: $color-footer-bg;
+}
 
 
 .modal-form {
@@ -49,7 +62,8 @@
 
 .backdrop,
 .backdrop-geo,
-.backdrop-franchise {
+.backdrop-franchise,
+.backdrop-about {
   position: fixed;
   width: 100%;
   height: 100%;
