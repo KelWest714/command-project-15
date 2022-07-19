@@ -2,34 +2,22 @@
   background: linear-gradient(#fff 10%, #fff5f6 5%);
 }
 
-.contacts__container {
-  @include mobile {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
 .contacts__list-items {
-  display: flex;
-  flex-wrap: nowrap;
+
 
   @include mobile {
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
   }
 
   @include tablet {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 32px;
     margin-bottom: 60px;
   }
 
-  @include desktop {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 60px;
-  }
+  @include desktop {}
 }
 
 .contacts__container:hover .contacts__content {
@@ -39,38 +27,23 @@
 }
 
 .contacts__content {
-  min-width: 220px;
+  width: 100%;
+  margin-bottom: 20px;
   padding: 43px 20px;
 
   background-color: var(--color-white);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  margin-right: 32px;
 
-  @include mobile {
-    margin-bottom: 20px;
-    margin-right: 0;
+  @include tablet {
+    width: calc((100% - 64px) / 3);
+    padding: 50px 31px;
   }
 
   @include desktop {
-    margin: 0;
     padding: 51px 43px;
-    flex-basis: calc(33.33333% - 20px);
-
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
   }
 
-  @include tablet {
-    margin: 0;
-    min-width: 0;
-    padding: 50px 31px;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
-  }
 }
 
 .contacts__content {
@@ -78,7 +51,6 @@
     box-shadow: 0px 2px 1px -1px rgba(221, 23, 73, 0.1),
       0px 1px 1px 0px rgba(212, 20, 67, 0.1),
       0px 1px 3px 0px rgba(197, 19, 63, 0.1);
-    margin-left: 10px;
     transition-property: transform;
     transition-duration: 500ms;
   }
