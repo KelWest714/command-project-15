@@ -3,8 +3,6 @@
 }
 
 .contacts__list-items {
-
-
   @include mobile {
     justify-content: center;
     margin-bottom: 20px;
@@ -17,7 +15,8 @@
     margin-bottom: 60px;
   }
 
-  @include desktop {}
+  @include desktop {
+  }
 }
 
 .contacts__container:hover .contacts__content {
@@ -43,7 +42,6 @@
   @include desktop {
     padding: 51px 43px;
   }
-
 }
 
 .contacts__content {
@@ -133,7 +131,7 @@
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.5;
 
   color: var(--color-second-text);
