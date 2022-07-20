@@ -7,7 +7,7 @@ const prev = document.getElementById('btn-prev'),
 let index = 0;
 
 const activeSlide = n => {
-  for (slide of slides) {
+  for (const slide of slides) {
     slide.classList.remove('active');
   }
   slides[n].classList.add('active');
