@@ -35,4 +35,28 @@
     cards.green.classList.toggle('is-hidden');
     cards.body.classList.toggle('no-scroll');
   }
+
+  cards.pink.onmousedown = function (e) {
+    let target = e.target;
+    let content = document.querySelector('.card-pink');
+    if (e.target.closest('.' + content.className) === null) {
+      togglePink();
+    }
+  };
+
+  cards.coffee.onmousedown = function (e) {
+    let target = e.target;
+    let content = document.querySelector('.card-coffee');
+    if (e.target.closest('.' + content.className) === null) {
+      toggleCoffee();
+    }
+  };
+
+  cards.green.onmousedown = function (e) {
+    let target = e.target;
+    let content = document.querySelector('.card-green');
+    if (e.target.closest('.' + content.className) === null) {
+      toggleGreen();
+    }
+  };
 })();
