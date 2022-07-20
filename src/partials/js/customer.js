@@ -14,14 +14,14 @@ const activeSlide = n => {
 };
 
 const activeDot = n => {
-  for (dot of dots) {
+  for (const dot of dots) {
     dot.classList.remove('active_dot');
   }
   dots[n].classList.add('active_dot');
 };
 
 const activeFeedback = n => {
-  for (feedback of feedbacks) {
+  for (const feedback of feedbacks) {
     feedback.classList.remove('active');
   }
   feedbacks[n].classList.add('active');
