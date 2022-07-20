@@ -30,6 +30,12 @@
   }
 }
 
+.modal-geo,
+.modal-franchise,
+.modal-about {
+height: fit-content;
+}
+
 .modal-about__frame{
   margin-top: 30px;
   border-radius: 8px;
@@ -124,7 +130,7 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.04em;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   text-transform: uppercase;
   color: $color-accent;
   text-shadow: 0 0 5px #ece2e4, 0 0 10px #ece2e4, 0 0 15px #ece2e4;
@@ -227,7 +233,10 @@
 }
 
 .submit-button.franchise {
-  bottom: 10%;
+  bottom: 2.5%;
+  @include mobile {
+     bottom: 2.5%;
+  }
 }
 
 .form-input__icon {
@@ -277,8 +286,8 @@
 // Franchise
 .franchise-modal__text {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: $color-footer-bg;
 }
 
